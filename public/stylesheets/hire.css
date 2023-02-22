@@ -1,0 +1,585 @@
+:root{
+    --primary:#00BFFF;
+    --secondary:#0c1424;
+    --body: rgb(252, 245, 245);
+  }
+
+  /* 
+  font-family: 'Noto Sans Mono', monospace;
+font-family: 'Poppins', sans-serif; */
+  
+  
+  
+  
+ 
+body {
+  width:100vw;
+  font-family: 'Noto Sans Mono', monospace;
+
+  background-color: rgb(252, 245, 245);
+  z-index: -3;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  color: var(--secondary);
+}
+
+
+.wrap{
+  max-width: 1398px;
+  margin: auto;
+  position:relative;
+  overflow-x:hidden !important;
+ 
+}
+
+
+/* header nav  */
+
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+
+.navbar-scroll .navar-brand {
+  color: #4f4f4f;
+}
+
+.navbar-scroll .nav-link:hover {
+  color: #1266f1;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+
+.navbar-scrolled .navar-brand {
+  color: #4f4f4f;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+nav .show  ul > li{
+  margin: auto;
+  transition: all 300ms;
+  padding-top: 2rem;
+ 
+}
+
+
+.show   .nav-link:hover{ 
+  color:  #1266f1 !important;;
+ 
+}
+
+nav .show{
+  height: 100vh;
+  transition: all 0.5s;
+  position: relative;
+}
+
+
+
+nav{
+  margin-top: 1rem;
+  width:100vw !important;
+  margin: 0px;
+  min-height: 5rem;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.navbar-toggler{
+border: none;
+}
+
+
+
+  
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.toggler-icon{
+  display: block;
+  height: 2px;
+  width: 26px;
+
+  background-color: var(--primary);
+  transition: all 0.5s;
+}
+
+
+
+ .middle-bar {
+  margin: 5px  auto;
+}
+
+
+
+.navbar-toggler  .top-bar{
+transform: rotate(45deg);
+transform-origin: 10% 10%;
+
+}
+.navbar-toggler  .middle-bar{
+opacity: 0;
+filter: alpha(opacity=0);
+
+}
+
+.navbar-toggler  .bottom-bar{
+transform: rotate(-45deg);
+transform-origin: 10% 10%;
+
+}
+
+@media (max-width :982) {
+    nav collapse {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* when navbar is collapsed   start */
+
+
+
+.navbar-toggler.collapsed .top-bar{
+
+transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar{
+opacity: 1;
+filter: alpha(opacity=100);
+
+transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .bottom-bar{
+
+transform: rotate(0);
+}
+
+
+
+
+
+
+
+
+
+/* end of navbar collpsed  */
+
+  
+  
+  
+  
+  
+  /* ============ mobile view .end// ============ */
+  
+  /* video */
+
+  .wrapme{
+    position: relative;
+  }
+
+  .bgPic{
+    background-color:#0c1424;
+    
+  }
+
+
+  .bgPic > img{
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .bgPic .overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .bgPic .wrap {
+    
+    color: white;
+    position: absolute;
+    
+    top: 10%;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+    font-weight: bolder;
+    
+  }
+
+  .bgPic  .header{
+    font-size: 5vw;
+    font-weight: bolder;
+    line-height:70%;
+    /* text-shadow:1px 1px 5px #fff ; */
+    
+  }
+
+  .bgPic .subheader{
+    line-height:110%;
+    font-size:2vw;
+    
+    width: 70%;
+  }
+  
+  
+  /* bgpic */
+  
+  /* flip over */
+  /* start of logo section */
+  .logoSectionWrap{
+    margin-top: 3rem;
+    color: #0c1424;
+  }
+
+  .logoSectionWrap img{
+    margin:auto;
+  }
+
+
+
+
+
+  .textHeaderSec > h6 ,h1,small,h2,h5 {
+    margin-top: 2rem;
+    padding-left: 2rem;
+   
+
+  }
+
+  /* .logoSectionWrap h1{
+    padding: 1rem;
+    font-stretch: ultra-expanded;
+  } */
+
+  .logoSectionWrap button{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: var(--primary);
+    border-style: none;
+    color: white;
+    font-size: large;
+  }
+  
+ 
+  /* end of logo section */
+  
+  
+  
+  /* start  of progrms section  */
+
+
+
+.programsOffered  > .heading {
+   margin:5rem;
+   padding: 4rem;
+
+    font-size: 4vh;
+    font-weight:bolder;
+    
+}
+.programsOffered{
+    margin-top: 3rem;
+  ;
+    background-color: #0c1424;
+
+    margin-bottom: 5rem;
+    color: white;
+    height: 100%;
+    
+}
+
+.programsOffered #leftcol{
+  height: 30rem;
+  background-color:  rgb(216, 208, 208);
+  border-radius: 1rem;
+  
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.programsOffered   .rightColContainer{
+  height: 30rem;
+  background-color: transparent;
+  border-radius: 1rem;
+ 
+  margin-bottom: 3rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+
+
+
+.programsOffered  .rightcols{
+  height: 8rem;
+  background-color: rgb(228, 224, 224);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1Srem;
+  border-radius: 1rem;
+}
+
+.rightColContainer  .top{
+  margin-top: 0rem;
+}
+
+.rightColContainer  .bottom{
+  margin-bottom: 0rem;
+}
+
+
+/* end of progarams section */
+
+  
+
+
+
+/* FAQ */
+
+.FAQ{
+  margin: auto;
+  font-family: 'Poppins', sans-serif; 
+}
+.FAQ > h1 {
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif; 
+}
+
+
+/* FAQ */
+  
+  /* start  of  details and vid section */
+.twoVidSection  {
+margin-top: 3rem;
+margin-bottom: 3rem;
+
+
+}
+  
+
+
+  
+  
+  
+  /* end  of two  vid section start */
+  
+  
+/* about founder start */
+.bio  .text-center{
+  color: var(--primary);
+    
+}
+
+
+/* about founder end */
+
+
+/* form area  start */
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+
+select{
+  line-height: 2.15rem;
+  font-size: 1rem;
+  padding-left: .75em;
+  padding-right: .75em;
+  border-style: none;
+}
+
+
+  .formstart{
+    margin-top: 3rem;
+  }
+
+
+.contactArea{
+  background-color:white;
+  color: #0c1424;
+  margin-bottom: 2rem;
+  
+}
+
+.card-body > h6{
+  line-height: 1.5rem;
+
+}
+
+.OliverBio p{
+  color: rgb(48, 47, 47);
+  line-height: 1.90rem;
+  width: 80%;
+  border-right: 1px solid #0c1424;
+  border-left: 1px solid #0c1424;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.OliverBio h4{
+  
+  margin-bottom: 2rem;
+}
+
+.OliverBio{
+  margin-top: 2rem;
+}
+
+#OliverBioimg{
+  margin-top: 4rem;
+  margin-left: 0rem;
+  border-top-left-radius: 5rem;
+}
+/* form area end */
+
+section  .sub{
+  background-color: var(--primary);
+  color:white;
+}
+
+
+
+/* programmeDesc  start */
+
+.programmeDesc{
+  background-color: #0c1424;
+}
+
+
+.programmeDesc blockquote{
+  z-index: 1;
+  padding-left: 2rem;
+  padding-bottom: .5rem;
+  padding-top: 3rem;
+  color: white;
+  padding-left:2rem ;
+  padding-right: 2rem;
+  margin: auto;
+  width: 70%;
+  color:#ffffff;
+ 
+}
+
+.programmeDesc #chief{
+  color: white;
+  margin-bottom: 3rem;
+
+}
+
+.programmeDesc .wrap{
+  margin-bottom: 3rem;
+}
+
+
+
+/* programmeDesc end */
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  section p{
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #floatn img{
+    
+    width: 4rem;
+    height: 4rm;
+    border-radius: 6rem;
+    opacity: 0.4;
+      
+}
+
+  
+  
+  
+  
+  /* footerstart */
+  
+  footer{
+    margin-top: 8rem;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  
+  footer a:hover{
+    color: var(--primary) !important;
+  }
+  
+  
+  footer p:hover{
+    color: var(--primary) !important;
+  }
+  
+  
+  footer a{
+    color: var(--primary) !important;
+  }
+  
+  /* footer end */

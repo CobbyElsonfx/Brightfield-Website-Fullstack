@@ -1,0 +1,677 @@
+:root{
+  --primary:#00BFFF;
+  --secondary:#0c1424;
+  --body: rgb(252, 245, 245);
+}
+
+/* 
+font-family: 'Noto Sans Mono', monospace;
+font-family: 'Poppins', sans-serif; */
+
+
+
+
+
+body {
+width:100vw;
+font-family: 'Noto Sans Mono', monospace;
+
+background-color: rgb(252, 245, 245);
+z-index: -3;
+/* display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; */
+color: var(--secondary);
+}
+
+
+.wrap{
+max-width: 1398px;
+margin: auto;
+position:relative;
+overflow-x:hidden !important;
+
+}
+
+
+/* header nav  */
+
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+
+.navbar-scroll .navar-brand {
+color: #4f4f4f;
+}
+
+.navbar-scroll .nav-link:hover {
+color: #1266f1;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+
+.navbar-scrolled .navar-brand {
+color: #4f4f4f;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+
+nav .show  ul > li{
+margin: auto;
+transition: all 300ms;
+padding-top: 2rem;
+
+}
+
+
+.show   .nav-link:hover{ 
+color:  #1266f1 !important;;
+
+}
+
+nav .show{
+height: 100vh;
+transition: all 0.5s;
+position: relative;
+}
+
+
+
+nav{
+margin-top: 1rem;
+width:100vw !important;
+margin: 0px;
+min-height: 5rem;
+position: relative;
+font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.navbar-toggler{
+border: none;
+}
+
+
+
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+outline: none;
+box-shadow: none;
+border: 0;
+}
+
+.toggler-icon{
+display: block;
+height: 2px;
+width: 26px;
+
+background-color: var(--primary);
+transition: all 0.5s;
+}
+
+
+
+.middle-bar {
+margin: 5px  auto;
+}
+
+
+
+.navbar-toggler  .top-bar{
+transform: rotate(45deg);
+transform-origin: 10% 10%;
+
+}
+.navbar-toggler  .middle-bar{
+opacity: 0;
+filter: alpha(opacity=0);
+
+}
+
+.navbar-toggler  .bottom-bar{
+transform: rotate(-45deg);
+transform-origin: 10% 10%;
+
+}
+
+@media (max-width :982) {
+  nav collapse {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* when navbar is collapsed   start */
+
+
+
+.navbar-toggler.collapsed .top-bar{
+
+transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar{
+opacity: 1;
+filter: alpha(opacity=100);
+
+transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .bottom-bar{
+
+transform: rotate(0);
+}
+
+
+
+
+
+
+
+
+
+
+/* end of navbar collpsed  */
+
+
+
+
+
+/* ============ mobile view .end// ============ */
+
+
+/* header nave */
+
+/* video */
+.vidext{
+  background-color: rgb(255, 255, 255);
+  height: 30rem;
+  min-width:100vw;
+  z-index: -2;
+  margin-bottom: 3rem;
+}
+
+.videoWrapper {
+  /* Telling our absolute positioned video to 
+  be relative to this element */
+  position: relative;
+
+  min-width:100vw;
+  height: 460px;
+
+
+  /* Will not allow the video to overflow the 
+  container */
+
+
+  overflow: hidden;
+
+  /* Centering the container's content vertically 
+  and horizontally */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.videoWrapper  video {
+  /** Simulationg background-size: cover */
+  object-fit: cover;
+  height:100vw;
+  width:100vw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.nav-link:active{
+  color: #1266f1;
+}
+
+
+.vidtext > h1{
+  color: white !important ;
+  z-index: 2;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px black;
+  position: absolute;
+  top: 0.05;
+  left: 2%;
+  width: 85%;
+}
+
+
+/* video */
+
+/* flip over */
+/* start of first middlePagePictures */
+
+
+
+#FirstFlipOver{
+    height: 100%;
+    width: 90%;
+    position: relative;
+    z-index: -2;
+    padding: 10% 10% 10% 10%;
+    margin: auto;
+    position: relative;
+    background-color: rgba(233, 230, 227,0.5) !important;      
+}
+
+#firstImageh0older{
+    background-image: url(../images/bossssss.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 1rem;
+    bottom: 1rem;
+    width: 90%;
+    position: absolute; 
+    z-index: -1;  
+   
+    
+}
+
+.FirstOverlayOfFlipOver{
+    min-height: 20rem;
+    
+    
+    max-width: 70%;
+    background-color: rgb(255, 255, 255);
+  
+   
+   margin-top: 2%;
+   margin-left: 39%;
+    margin-bottom:4% ;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0,0.2);
+    z-index: 2;
+}
+
+.FirstOverlayOfFlipOver > h6{
+    font-size: 98%;
+    color: rgb(0, 0, 0);
+    padding-right: 10%;
+    padding-left: 10px;
+    padding-top: 5%;
+    padding-bottom: 10px;
+
+
+  
+}
+
+.FirstOverlayOfFlipOver > hr {
+    border-color: white;
+}
+
+
+
+
+
+
+/* end of flip over */
+
+
+
+/* start  of bio */
+.bio{
+  padding-top: 3rem;
+  margin-top: 4rem;
+  width: 80%;
+  margin: auto;
+}
+
+.bio > center >h1{
+  color: var(--primary);
+}
+.bio  > h4 {
+  line-height: 140%;
+  text-align: center;
+}
+
+/* end  of bio */
+
+
+
+
+/* start of col vid section start */
+.wrapThreeVids > center > iframe{
+  max-width: 90%;
+}
+.wrapThreeVidsParent{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+
+/* end of col vid secion  */
+
+
+/* couner Area start */
+.counterArea{
+  height: 50% ;
+  background-color: rgba(0, 0, 0,0.9);
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 5rem;
+  color: white;
+
+}
+
+
+#centerCounterArea {
+  padding-top: 10%;
+  padding-bottom: 15%;
+  
+}
+
+
+#centerCounterArea > span > i{
+  padding-bottom: 5%;
+  color: white;
+
+}
+
+
+/* end  of  counter  section */
+
+
+
+/* start  of flipOverthreecards section */
+
+
+.flip{
+  margin-top:5rem;
+}
+#FirstFlipOver{
+  min-height: 28rem;
+  width: 90%;
+  position: relative;
+  z-index: -2;
+  padding: 1% 1% 1% 1%;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(233, 230, 227,0.5) !important;      
+}
+
+#FirstFlipOver1{
+  min-height: 28rem;
+  width: 90%;
+  position: relative;
+  z-index: -2;
+  padding: 1% 1% 1% 1%;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(233, 230, 227,0.5) !important;      
+}
+
+/* #secondImageholder{
+  background-image: url(../images/group.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 1rem;
+  bottom: 1rem;
+  width: 90%;
+  position: absolute; 
+  z-index: -1;  
+
+ 
+  
+} */
+.FirstOverlayOfFlipOver2{
+  min-height: 20rem;
+  
+  
+  max-width: 70%;
+  background-color: rgb(255, 255, 255);
+
+ 
+ margin-top: 2%;
+ margin-left: 39%;
+  margin-bottom:4% ;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0,0.2);
+  z-index: 2;
+  position: absolute;
+}
+.FirstOverlayOfFlipOver2 > h6{
+  font-size: 98%;
+  
+  color: rgb(0, 0, 0);
+  padding-right: 10%;
+  padding-left: 10px;
+  padding-top: 5%;
+  padding-bottom: 10px;
+
+}
+
+.FirstOverlayOfFlipOver2 > hr {
+  border-color: white;
+}
+
+
+
+
+
+
+
+
+/* start of third flip */
+
+#FirstFlipOver2{
+  min-height: 28rem;
+  width: 90%;
+  position: relative;
+  z-index: -2;
+  padding: 1% 1% 1% 1%;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(233, 230, 227,0.5) !important;      
+}
+
+.FirstOverlayOfFlipOver3{
+  min-height: 20rem;
+  
+  
+  max-width: 70%;
+  background-color: rgb(255, 255, 255);
+
+ 
+ margin-top: 2%;
+ margin-left: 39%;
+  margin-bottom:4% ;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0,0.2);
+  z-index: 2;
+  position: absolute;
+}
+
+.FirstOverlayOfFlipOver3 > h6{
+  font-size: 98%;
+  
+  color: rgb(0, 0, 0);
+  padding-right: 10%;
+  padding-left: 10px;
+  padding-top: 5%;
+  padding-bottom: 10px;
+
+}
+
+.FirstOverlayOfFlipOver3 > hr {
+  border-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.FirstOverlayOfFlipOver{
+  min-height: 20rem;
+  
+  
+  max-width: 70%;
+  background-color: rgb(255, 255, 255);
+
+ 
+ margin-top: 2%;
+ margin-left: 39%;
+  margin-bottom:4% ;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0,0.2);
+  z-index: 2;
+}
+
+.FirstOverlayOfFlipOver > h6{
+  font-size: 98%;
+  
+  color: rgb(0, 0, 0);
+  padding-right: 10%;
+  padding-left: 10px;
+  padding-top: 5%;
+  padding-bottom: 10px;
+
+}
+
+.FirstOverlayOfFlipOver > hr {
+  border-color: white;
+}
+#thirdImageholder{
+  background-image: url(../images/oliverandfrind.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 1rem;
+  bottom: 1rem;
+  width: 90%;
+  position: absolute; 
+  z-index: -1;  
+ 
+  
+}
+
+
+#FirstFlipOver3{
+  min-height: 28rem;
+  width: 90%;
+  position: relative;
+  z-index: -2;
+  padding: 1% 1% 1% 1%;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(233, 230, 227,0.5) !important;      
+}
+
+#forthImageholder{
+  background-image: url(../images/oliverandfrind.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 1rem;
+  bottom: 1rem;
+  width: 90%;
+  position: absolute; 
+  z-index: -1;  
+ 
+  
+}
+
+
+
+
+/* end  of flipOverthreecards */
+
+
+#floatn img{
+    
+    width: 4rem;
+    height: 4rm;
+    border-radius: 6rem;
+    opacity: 0.4;
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footerstart */
+
+footer{
+  margin-top: 8rem;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color:rgb(41, 41, 41);
+  font-family: 'Poppins', sans-serif; 
+}
+
+
+footer a:hover{
+  color: var(--primary) !important;
+}
+
+
+footer p:hover{
+  color: var(--primary) !important;
+}
+
+
+footer a{
+  color: var(--primary) !important;
+}
+
+/* footer end */
+

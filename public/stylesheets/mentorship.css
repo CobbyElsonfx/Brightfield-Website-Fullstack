@@ -1,0 +1,659 @@
+:root{
+    --primary:#00BFFF;
+    --secondary:#0c1424;
+    --body: rgb(252, 245, 245);
+  }
+  
+  /* 
+  font-family: 'Noto Sans Mono', monospace;
+font-family: 'Poppins', sans-serif;
+ */
+  
+  
+  
+  body {
+    width:100vw;
+    font-family: 'Noto Sans Mono', monospace;
+
+    background-color: rgb(252, 245, 245);
+    z-index: -3;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    color: var(--secondary);
+  }
+  
+  
+  .wrap{
+    max-width: 1398px;
+    margin: auto;
+    position:relative;
+    overflow-x:hidden !important;
+   
+  }
+  
+  
+  /* header nav  */
+  /* header nav  */
+.navext{
+  background-color: var(--primary);
+  height: 7rem;
+  width:100vw;
+ 
+
+}
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+
+.navbar-scroll .navar-brand {
+  color: #4f4f4f;
+}
+
+.navbar-scroll .nav-link:hover {
+  color: #1266f1;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+
+.navbar-scrolled .navar-brand {
+  color: #4f4f4f;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+nav .show  ul > li{
+  margin: auto;
+  transition: all 300ms;
+  padding-top: 2rem;
+ 
+}
+
+
+.show   .nav-link:hover{ 
+  color:  #1266f1 !important;;
+ 
+}
+
+nav .show{
+  height: 100vh;
+  transition: all 0.5s;
+  position: relative;
+}
+
+
+
+nav{
+  margin-top: 1rem;
+  width:100vw !important;
+  margin: 0px;
+  min-height: 5rem;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.navbar-toggler{
+border: none;
+}
+
+
+
+  
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.toggler-icon{
+  display: block;
+  height: 2px;
+  width: 26px;
+
+  background-color: var(--primary);
+  transition: all 0.5s;
+}
+
+
+
+ .middle-bar {
+  margin: 5px  auto;
+}
+
+
+
+.navbar-toggler  .top-bar{
+transform: rotate(45deg);
+transform-origin: 10% 10%;
+
+}
+.navbar-toggler  .middle-bar{
+opacity: 0;
+filter: alpha(opacity=0);
+
+}
+
+.navbar-toggler  .bottom-bar{
+transform: rotate(-45deg);
+transform-origin: 10% 10%;
+
+}
+
+@media (max-width :982) {
+    nav collapse {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* when navbar is collapsed   start */
+
+
+
+.navbar-toggler.collapsed .top-bar{
+
+transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar{
+opacity: 1;
+filter: alpha(opacity=100);
+
+transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .bottom-bar{
+
+transform: rotate(0);
+}
+
+
+
+
+
+
+
+/* end of navbar collpsed  */
+  
+  
+  
+  /* ============ mobile view .end// ============ */
+  
+  /* video */
+
+  .wrapme{
+    position: relative;
+  }
+
+  .bgPic{
+    background-color:#0c1424;
+    
+  }
+
+
+  .bgPic > img{
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+  }
+  
+  .bgPic > .overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .bgPic > p{
+    text-decoration: overline;
+    color: white;
+    position: absolute;
+    top: 65%;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+    font-weight: bolder;
+    font-stretch:extra-expanded !important;
+  
+  }
+  
+  
+  /* bgpic */
+  
+  
+  /* header pathwasy */
+  
+  /* end of header  pathway*/
+  
+  
+  
+  /* start  6 col pathway  */
+  .wrappathway{
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  #ApplyNow {
+   
+    margin: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-style: none;
+    background-color: var(--primary);
+    color: white !important;
+ }
+
+ #ApplyNow  a{
+    text-decoration: none;
+    color: white;
+ }
+  
+
+/* end of 6 col pathway */
+
+  
+  
+ /* start of   firsttestimonial */
+#firsttestimonial{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+    background-color: var(--secondary);
+    position: relative;
+    height: 30rem;
+    z-index: -3;
+}
+
+
+
+* flip over */
+/* start of first middlePagePictures */
+
+
+
+#FirstFlipOver{
+    height: 100%;
+    width: 90%;
+    position: relative;
+    z-index: -2;
+    padding: 10% 10% 10% 10%;
+    margin: auto;
+    position: relative;
+    background-color: rgba(233, 230, 227,0.5) !important;      
+}
+
+#firstImageholder{
+    background-image: url(../images/louiz.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 1rem;
+    bottom: 1rem;
+    width: 90%;
+    position: absolute; 
+    z-index: -1;  
+   
+    
+}
+
+.FirstOverlayOfFlipOver{
+    min-height: 20rem;
+    
+    
+    max-width: 70%;
+    background-color: rgb(255, 255, 255);
+  
+   
+   margin-top: 2%;
+   margin-left: 39%;
+    margin-bottom:4% ;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0,0.2);
+    z-index: 2;
+}
+
+.FirstOverlayOfFlipOver > h6{
+    font-size: 98%;
+    color: rgb(0, 0, 0);
+    padding-right: 10%;
+    padding-left: 10px;
+    padding-top: 3rem;
+    padding-bottom: 10px;
+    width: 80%;
+    margin: auto;
+
+
+  
+}
+
+.FirstOverlayOfFlipOver > hr {
+    border-color: white;
+}
+
+
+
+
+
+
+/* start of as  mentor */
+
+.AsMent{
+  background-color: var(--secondary);
+  color: white;
+  
+}
+
+.AsMentWrap{
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+ /* end of end of as mentor */
+
+
+
+  
+  
+  
+  /* end  of two  vid section start */
+  
+  
+/* about founder start */
+.bio  .text-center{
+  color: var(--primary);
+    
+}
+
+
+/* about founder end */
+
+
+/* after flip what you  need to know section   */
+
+
+.wrapvector{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.circleVector{
+    width: 200px;
+    height: 200px;
+    background-color:var(--primary);
+    border-radius: 8rem;
+    position: relative;
+}
+
+.wrapvector   .body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 200px;
+
+}
+
+.wrapvector > .body > p {
+    font-size: small;
+    margin-top: 2rem;
+}
+.wrapvector > .body > h4 {
+    margin-top: 2rem;
+}
+
+.wrapvector >  .body{
+    margin: auto;
+}
+
+
+.wrapvector .circleVector>  .fa-video {
+  margin: auto;
+  padding: 2rem;
+  color: white;
+}
+
+.wrapvector .circleVector>  .fa-business-time {
+  margin: auto;
+  padding: 2rem;
+  color: white;
+}
+
+.wrapvector .circleVector>  .fa-handshake-angle{
+  margin: auto;
+  padding: 2rem;
+  color: white;
+}
+
+
+.wrapvector .circleVector>  .fa-certificate{
+  margin: auto;
+  padding: 2rem;
+  color: white;
+}
+
+
+
+
+/* end of what you need to know */
+
+
+/*  */
+#becomeMember{
+   
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-style: none;
+    background-color: var(--primary);
+    color: white !important;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#becomeMember a{
+  text-decoration: none;
+  color: white;
+}
+
+
+  
+
+/* requirements  starts */
+
+
+
+.requirementSec button  {
+   
+  
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-style: none;
+    background-color: var(--primary);
+    color: white !important;
+    margin: auto;
+ }
+ .requirementSec button  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+ }
+
+
+/* requirements end */
+
+
+
+
+/* testimonies  start */
+.testimoniesSec{
+    background-color: var(--secondary);
+    color: white;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.testimoniesSec  h1{
+    width: 70%;
+    margin: auto;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* .testimoniesSec small{
+
+} */
+
+
+/* tetimonies end */
+  
+
+  
+
+  
+  
+  
+
+
+/* interested in   mentoring section */
+.mentormotiv {
+  background-color: white;
+  margin: 2rem;
+}
+
+.mentorMotivationwrap{
+  width: 70%;
+  margin: auto;
+  padding: 5%;
+  color: var(--secondary);
+
+}
+
+hr{
+  border-color: var(--secondary);
+}
+
+
+.card-registration .btn-outline-light{
+  color: white;
+  background-color: var(--primary);
+}
+  
+  
+#floatn img{
+    
+  width: 4rem;
+  height: 4rm;
+  border-radius: 6rem;
+  opacity: 0.4;
+    
+}
+
+  /* interested in mentoring? section*/
+.interestedSection .wrap{
+  
+  width: 80%;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+ 
+ 
+}
+
+.interestedSection  {
+  background-color: white;
+  margin-top: 3rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+
+}
+
+.interestedSection .wrap button {
+   margin-top: 2rem;
+   padding: 1.2rem;
+   border-style: none;
+   background-color: var(--primary);
+   color: white !important;
+}
+
+.interestedSection  a{
+  color: white;
+}
+
+
+
+
+
+
+
+
+/* interested inmentoring section */
+  
+  
+  
+  
+  
+  
+  /* footerstart */
+  
+  footer{
+    margin-top: 8rem;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  
+  footer a:hover{
+    color: var(--primary) !important;
+  }
+  
+  
+  footer p:hover{
+    color: var(--primary)  !important;
+  }
+  
+  
+  footer a{
+    color: var(--primary) !important;
+  }
+  
+  /* footer end */

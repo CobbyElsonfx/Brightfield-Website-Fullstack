@@ -23,6 +23,7 @@ var contactRouter = require('./routes/contact')
 var learnRouter = require('./routes/learn')
 var hireRouter = require('./routes/hire')
 var mentorshipRouter = require('./routes/mentorship')
+var newsfeed = require('./routes/newsfeed')
 var app = express();
 
 // view engine setup
@@ -52,6 +53,7 @@ app.use('/contact', contactRouter)
 app.use('/learn',learnRouter)
 app.use('/hire',hireRouter)
 app.use('/mentorship', mentorshipRouter)
+app.use('/newsfeed', newsfeed)
 
 
 

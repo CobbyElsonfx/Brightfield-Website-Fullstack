@@ -35,21 +35,29 @@
                     </p>
                  </div>
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-              <form>
+              <form method="post"  action="./contact">
   
                 <div class="row">
                   <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
-                      <input type="text" id="firstName" class="form-control form-control-lg" />
+                      <input type="text" id="firstName" name="firstName" class="form-control form-control-lg"  required/>
                       <label class="form-label" for="firstName">First Name</label>
+                    </div>
+  
+                  </div>
+                    <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="middleName" name="middleName" class="form-control form-control-lg"  required/>
+                      <label class="form-label" for="middletName">Middle Name</label>
                     </div>
   
                   </div>
                   <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
-                      <input type="text" id="lastName" class="form-control form-control-lg" />
+                      <input type="text" id="lastName" name="lastName" class="form-control form-control-lg"   required/>
                       <label class="form-label" for="lastName">Last Name</label>
                     </div>
   
@@ -60,7 +68,7 @@
                   <div class="col-md-6 mb-4 d-flex align-items-center">
   
                     <div class="form-outline datepicker w-100">
-                      <input type="number" class="form-control form-control-lg" id="birthdayDate" />
+                      <input type="number" class="form-control form-control-lg"  name="age" id="birthdayDate"   required />
                       <label for="birthdayDate" class="form-label">Age</label>
                     </div>
   
@@ -70,19 +78,18 @@
                     <h6 class="mb-2 pb-1">Gender: </h6>
   
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                        value="option1" checked />
+                      <input class="form-check-input" type="radio" name="gender" id="femaleGender"value="option1" checked />
                       <label class="form-check-label" for="femaleGender">Female</label>
                     </div>
   
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                      <input class="form-check-input" type="radio" name="gender" id="maleGender"
                         value="option2" />
                       <label class="form-check-label" for="maleGender">Male</label>
                     </div>
   
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                      <input class="form-check-input" type="radio" name="gender" id="otherGender"
                         value="option3" />
                       <label class="form-check-label" for="otherGender">Other</label>
                     </div>
@@ -94,7 +101,7 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
-                      <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                      <input type="email" id="emailAddress" class="form-control form-control-lg"   name="email"  required/>
                       <label class="form-label" for="emailAddress">Email</label>
                     </div>
   
@@ -102,7 +109,7 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
-                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                      <input type="tel" id="phoneNumber" class="form-control form-control-lg"  name="phoneNumber"  required />
                       <label class="form-label" for="phoneNumber">Phone Number</label>
                     </div>
   
@@ -113,7 +120,7 @@
                   <div class="col-12">
   
                     <div class="form-outline">
-                        <textarea class="form-control" id="textAreaExample" rows="7"></textarea>
+                        <textarea class="form-control" id="textAreaExample" rows="7"  name="message"></textarea>
                         <label class="form-label" for="textAreaExample">Message</label>
                       </div>
                   </div>

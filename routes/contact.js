@@ -19,7 +19,6 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res){
    // res.redirect("/contact")
    const {firstName,middleName,lastName,age,gender,email,phoneNumber,message} =req.body;  //destructuring from the req body
-
      
   Person.findOne({email:email} )
   .then(user=> {
@@ -56,36 +55,15 @@ router.post('/', function(req, res){
              res.render('contactsubmission', {email: email , phoneNumber: phoneNumber ,firstName:firstName , middleName:middleName ,lastName:lastName});
              console.log(process.env.SENDGRID_API_KEY)
              //after reander send email to client 
-               
-               //ES6
-               // sgMail.send({
-               //    to :{
-               //       email: "andohfrancis1191@gmail.com",
-               //       name: "Cobby"
-               //    },
-               //    from:{
-               //       email: "andohfrancis9187@gmail.com",
-               //       name: "Brightfield Tech Academy"
-               //    },
-               //    templateId: "d-9869dcbdb55a47d2acdaa13934d5f550",
-               //    dynamicTemplateData :{
-               //       name:"Francis Kwabena Andoh"
-               //    }
-               // })
-               // .then(() => {
-               //    console.log("email sent succcesfully")
-               // }).catch((err)=> {
-               //    console.log(err)
-
-               // }) 
+            
                sgMail.setApiKey(process.env.SENDGRID_API_KEY);
                   const msg = {
-                  to: 'andohfrancis1191@gmail.com',
+                  to: `${email}`,
                   from: 'andohfrancis9187@gmail.com',
                   templateId: 'd-9869dcbdb55a47d2acdaa13934d5f550',
                   dynamicTemplateData: {
                      subject: 'Testing Templates',
-                     name: 'Francis Kwabena Andoh',
+                     name: `${firstName} ${ middleName} ${lastName}`,
                      city: 'Ghana',
                   },
                   };

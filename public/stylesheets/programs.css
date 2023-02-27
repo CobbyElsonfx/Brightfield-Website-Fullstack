@@ -323,12 +323,13 @@ transform: rotate(0);
 
     font-size: 4vh;
     font-weight:bolder;
+    color: white;
     
 }
 .programsOffered{
     margin-top: 3rem;
   ;
-    background-color: #0c1424;
+    background-color:var(--primary);
 
     margin-bottom: 5rem;
     color: white;
@@ -338,7 +339,7 @@ transform: rotate(0);
 
 .programsOffered #leftcol{
   height: 30rem;
-  background-color:  rgb(216, 208, 208);
+  background-color:  rgb(251, 247, 247);
   border-radius: 1rem;
   
   margin-bottom: 3rem;

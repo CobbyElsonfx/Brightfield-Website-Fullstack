@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const dbConnect = require("./db/connect")
 var bodyParser = require('body-parser');
+const sgMail = require('@sendgrid/mail');
 var multer = require('multer');
 var upload = multer()
 const port = 8585;
-
 require("dotenv").config()
 
 //
@@ -21,7 +21,7 @@ var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/mentorship')
 var contactRouter = require('./routes/contact')
 var learnRouter = require('./routes/learn')
-var hireRouter = require('./routes/hire')
+var programsRouter = require('./routes/programs')
 var mentorshipRouter = require('./routes/mentorship')
 var newsfeed = require('./routes/newsfeed')
 var app = express();
@@ -51,7 +51,7 @@ app.use('/users', usersRouter);
 app.use('/about',aboutRouter)
 app.use('/contact', contactRouter)
 app.use('/learn',learnRouter)
-app.use('/hire',hireRouter)
+app.use('/programs',programsRouter)
 app.use('/mentorship', mentorshipRouter)
 app.use('/newsfeed', newsfeed)
 

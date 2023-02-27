@@ -1,6 +1,9 @@
 var express = require('express');
-var Person = require('../models/forms.js')
 const router = express.Router();
+var Person = require('../models/forms.js')
+require("dotenv").config()
+const sgMail = require('@sendgrid/mail');
+
 
 
 
@@ -51,20 +54,58 @@ router.post('/', function(req, res){
             else{
              //   res.send("okay is working")
              res.render('contactsubmission', {email: email , phoneNumber: phoneNumber ,firstName:firstName , middleName:middleName ,lastName:lastName});
-            }
-         
-                                              }
+             console.log(process.env.SENDGRID_API_KEY)
+             //after reander send email to client 
+               
+               //ES6
+               // sgMail.send({
+               //    to :{
+               //       email: "andohfrancis1191@gmail.com",
+               //       name: "Cobby"
+               //    },
+               //    from:{
+               //       email: "andohfrancis9187@gmail.com",
+               //       name: "Brightfield Tech Academy"
+               //    },
+               //    templateId: "d-9869dcbdb55a47d2acdaa13934d5f550",
+               //    dynamicTemplateData :{
+               //       name:"Francis Kwabena Andoh"
+               //    }
+               // })
+               // .then(() => {
+               //    console.log("email sent succcesfully")
+               // }).catch((err)=> {
+               //    console.log(err)
+
+               // }) 
+               sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+                  const msg = {
+                  to: 'andohfrancis1191@gmail.com',
+                  from: 'andohfrancis9187@gmail.com',
+                  templateId: 'd-9869dcbdb55a47d2acdaa13934d5f550',
+                  dynamicTemplateData: {
+                     subject: 'Testing Templates',
+                     name: 'Francis Kwabena Andoh',
+                     city: 'Ghana',
+                  },
+                  };
+                  sgMail.send(msg).then(()=>{
+                     console.log("email sent successfully")
+                  }).catch((err)=>{
+                        console.log(err)
+                  })
+                  
+                     }                    }
                );
-             }z
+             }
+
+
 
       }).catch(err => {
          console.log(err)
       })
 
-
-
-
-                 }
+    }
    
      
 );

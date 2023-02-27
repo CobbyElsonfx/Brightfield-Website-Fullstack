@@ -232,7 +232,7 @@ transform: rotate(0);
   position: relative;
 
   min-width:100vw;
-  height: 460px;
+  min-height: 370px;
 
 
   /* Will not allow the video to overflow the 
@@ -301,18 +301,6 @@ transform: rotate(0);
     background-color: rgba(233, 230, 227,0.5) !important;      
 }
 
-#firstImageh0older{
-    background-image: url(../images/bossssss.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    top: 1rem;
-    bottom: 1rem;
-    width: 90%;
-    position: absolute; 
-    z-index: -1;  
-   
-    
-}
 
 .FirstOverlayOfFlipOver{
     min-height: 20rem;
@@ -356,18 +344,15 @@ transform: rotate(0);
 
 /* start  of bio */
 .bio{
-  padding-top: 3rem;
-  margin-top: 4rem;
-  width: 80%;
-  margin: auto;
+  width: 100%;
 }
 
-.bio > center >h1{
-  color: var(--primary);
+.missionAndValues{
+  background-color: #505170;
 }
-.bio  > h4 {
-  line-height: 140%;
-  text-align: center;
+
+.bio  p{
+  color: white;
 }
 
 /* end  of bio */
@@ -376,13 +361,18 @@ transform: rotate(0);
 
 
 /* start of col vid section start */
-.wrapThreeVids > center > iframe{
+/* .wrapThreeVids > center > iframe{
   max-width: 90%;
 }
 .wrapThreeVidsParent{
   margin-top: 3rem;
   margin-bottom: 3rem;
   overflow: hidden;
+} */
+
+.wrapParentDualSection .textArea{
+  padding: 3rem;
+
 }
 
 

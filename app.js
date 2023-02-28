@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 var multer = require('multer');
 var upload = multer()
-const port = 8585;
+const port = process.env.PORT || 8585;
 require("dotenv").config()
 
 //

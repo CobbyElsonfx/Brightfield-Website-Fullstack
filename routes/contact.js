@@ -1,8 +1,11 @@
 var express = require('express');
 const router = express.Router();
 var Person = require('../models/forms.js')
+var path = require("path")
 require("dotenv").config()
-const sgMail = require('@sendgrid/mail');
+const nodemailer = require('nodemailer');
+const hbs = require('nodemailer-express-handlebars')
+// const sgMail = require('@sendgrid/mail');
 
 
 
@@ -76,7 +79,6 @@ router.post('/', function(req, res){
 
 
             //using nodemailer for sending messages
-            const nodemailer = require('nodemailer');
 
                const transporter = nodemailer.createTransport({
                service: 'gmail',
@@ -87,11 +89,30 @@ router.post('/', function(req, res){
                }
                });
 
+            // Now we create an email template but first, we have to allow nodemail to compile the handlebars. 
+            //For this, we have a middleware transport.use()
+               const handlebarOptions = {
+                  viewEngine: {
+                     extName: '.hbs',
+                      partialsDir: path.resolve('./views/'),
+                      defaultLayout: false,
+                  },
+                  viewPath: path.resolve('./views/'),
+                  extName: '.hbs',
+              };
+
+              // use a template file with nodemailer
+               transporter.use('compile', hbs(handlebarOptions))
+
                const mailOptions = {
                from: 'andohfrancis9187@gmail.com',
-               to: 'andohfrancis1191@gmail.com',
-               subject: 'Invoices due',
-               text: 'Dudes, we really need your money.'
+               to: `${email}`,
+               subject: 'Thank you for joining us',
+              template: 'email', // the name of the template file i.e email.handlebars
+               context:{
+                  name: `${firstName} ${middleName} ${lastName}`, // replace {{name}} with Adebola
+
+               }
                };
 
                transporter.sendMail(mailOptions, function(error, info){

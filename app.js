@@ -7,9 +7,10 @@ const dbConnect = require("./db/connect")
 var bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 var multer = require('multer');
-var upload = multer()
 const port = process.env.PORT || 8585;
-require("dotenv").config()
+const dotenv = require("dotenv");
+dotenv.config();
+
 
 //
 const hbs = require('express-handlebars');

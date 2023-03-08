@@ -214,7 +214,6 @@ transform: rotate(0);
   
   
   
-  /* ============ mobile view .end// ============ */
   
   /* video */
 
@@ -255,13 +254,6 @@ transform: rotate(0);
     
   }
 
-  .bgPic  .header{
-    font-size: 5vw;
-    font-weight: bolder;
-    line-height:70%;
-    /* text-shadow:1px 1px 5px #fff ; */
-    
-  }
 
   .bgPic .subheader{
     line-height:110%;
@@ -272,7 +264,17 @@ transform: rotate(0);
   /* bgpic */
   
   
-  /* header pathwasy */
+
+
+
+
+
+  /* overview */
+
+  #overview {
+   font-family: 'Poppins', sans-serif; ;
+  }
+   /* header pathwasy */
   
   /* end of header  pathway*/
   

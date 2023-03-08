@@ -329,7 +329,7 @@ transform: rotate(0);
 .programsOffered{
     margin-top: 3rem;
   ;
-    background-color:var(--primary);
+    background-color:#f3f3f5;
 
     margin-bottom: 5rem;
     color: white;

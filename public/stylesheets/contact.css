@@ -263,16 +263,16 @@ transform: rotate(0);
   }
 
   .bgPic  .header{
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: bolder;
-    line-height:70%;
+    line-height:90%;
     /* text-shadow:1px 1px 5px #fff ; */
     
   }
 
   .bgPic .subheader{
-    line-height:110%;
-    font-size:3vw;
+    line-height:100%;
+    font-size:6vw;
     
     width: 70%;
   }

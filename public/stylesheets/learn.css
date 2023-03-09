@@ -256,8 +256,8 @@ transform: rotate(0);
 
 
   .bgPic .subheader{
-    line-height:110%;
-    font-size:3vw;
+    line-height:100%;
+    font-size:8vw;
     
     width: 70%;
   }

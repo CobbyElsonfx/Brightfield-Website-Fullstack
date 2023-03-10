@@ -13,7 +13,7 @@ const hbs = require('nodemailer-express-handlebars')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('contact', { title: 'Contact' });
+  res.render('contact', { title: 'Brigthfield Tech Academy' });
 });
 
 

@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const dbConnect = require("./db/connect")
 var bodyParser = require('body-parser');
-const sgMail = require('@sendgrid/mail');
 var multer = require('multer');
 const port = process.env.PORT || 8585;
 const dotenv = require("dotenv");

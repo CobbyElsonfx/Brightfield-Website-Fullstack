@@ -4,7 +4,6 @@
 </head>
 
 {{!-- {{>header}} --}}
-<section>
     <div >
       <div class="row">
         <div class="col-12 wrapme ">
@@ -30,18 +29,17 @@
 
     <div class="container">  
       <div class="backgroundColor" >
-          <div class="row"> 
-                
-                <div class="col-12">
-                   <p class="h3 shadow-lg px-3" style="background-color:var(--primary) ; color:white;">BRIGHTFIELD TECH ACADEMY</p>
-                  <iframe allowfullscreen style="border:0;height:500px; width:100%"  src="https://rss.app/embed/v1/imageboard/t1bMacw7LTfsGeKt" frameborder="0"></iframe>
-                </div>
-          </div> <!--row-->
-          <div class="row"> 
-                
-            <iframe width="900" height="1600" src="https://rss.app/embed/v1/magazine/nVMpEXAXtea3MjaO" frameborder="0"></iframe>
-               
-          </div> <!--row-->
+         <h1>News</h1>
+    <div class="news-container">
+      {{#each newsData}}
+      <div class="news-item">
+        <img src="{{this.urlToImage}}" alt="{{this.title}}">
+        <p  class="h4">{{this.title}}</p>
+        <p>{{this.description}}</p>
+      </div>
+      {{/each}}
+    </div>
+                              
       <div class="row">
         <div class="col-sm-6 col-xm-12"  >
                    <iframe allowfullscreen  style="border:0;height:800px;width:100%" loading="lazy" src="https://rss.app/embed/v1/magazine/tCh7KftRtzv6UlmG" frameborder="0"></iframe>
@@ -60,8 +58,7 @@
 
           </div>
                 </div>
-      </div>      
-                
+      </div>              
     </div> <!--container -->
 
     </div>    <!--programsofferedcontainer-->

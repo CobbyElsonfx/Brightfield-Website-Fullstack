@@ -11,6 +11,7 @@ fetchNews = async(req,res)=>{
         const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
         const newsData = response.data.articles
         res.render("newsfeed" , {newsData})
+        console.log(newsData)
 
         
     } catch (error) {

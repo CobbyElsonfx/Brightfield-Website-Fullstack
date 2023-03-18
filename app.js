@@ -59,7 +59,7 @@ app.use('/newsfeed', newsfeed)
 
 
 const start = async ()=>{            //in order to get the database connect before starting the servers 
-  // se decedided to use async await function 
+  // se decided to use async await function 
   try { 
       await dbConnect(process.env.MONGO_URI)
        app.listen(port , ()=>{
@@ -76,7 +76,7 @@ start()
 // if (dbConnect(process.env.MONGO_URI)){
 //   console.log("connected success")
 // }else{
-//   console.log("conection failed")
+//   console.log("connection failed")
 // }
 
 
@@ -97,4 +97,4 @@ start()
 //   res.render('error');
 // });
 
-// module.exports = app; it expors to the bin/www folder for server startup but i wan to start the server in the app.js 
+// module.exports = app; it exports to the bin/www folder for server startup but i wan to start the server in the app.js 

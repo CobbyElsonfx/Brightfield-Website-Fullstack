@@ -3,9 +3,9 @@ const router = express.Router();
 var Person = require('../models/forms.js')
 var path = require("path")
 require("dotenv").config()
-const nodemailer = require('nodemailer');
-const hbs = require('nodemailer-express-handlebars')
-// const sgMail = require('@sendgrid/mail');
+// const nodemailer = require('nodemailer');
+// const hbs = require('nodemailer-express-handlebars')
+var sgMail = require('@sendgrid/mail');
 
 
 
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res){
    // res.redirect("/contact")
-   const {firstName,middleName,lastName,age,gender,email,phoneNumber,message} =req.body;  //destructuring from the req body
+   const {firstName,middleName,lastName,age,gender,email,phoneNumber,message} =  req.body;  //destructuring from the req body
      
   Person.findOne({email:email} )
   .then(user=> {
@@ -34,7 +34,6 @@ router.post('/', function(req, res){
               } 
               
       else{
-
          var newPerson = new Person({
             firstName: firstName,
             middleName:middleName,
@@ -56,7 +55,7 @@ router.post('/', function(req, res){
             else{
              //   res.send("okay is working")
              res.render('contactsubmission', {email: email , phoneNumber: phoneNumber ,firstName:firstName , middleName:middleName ,lastName:lastName});
-            //  console.log(process.env.SENDGRID_API_KEY)
+             console.log(process.env.SENDGRID_API_KEY)
             //  //after reander send email to client 
             
                sgMail.setApiKey(process.env.SENDGRID_API_KEY);

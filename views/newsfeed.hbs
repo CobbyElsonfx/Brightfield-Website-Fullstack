@@ -32,18 +32,18 @@
     <div class="row">
       {{#each newsData}}
         <div class="col-xm-12 col-sm-6 col-md-4">
-          <div class="card h-100">
-          <a href="#">
-            <img class="card-img-top" src="{{this.urlToImage}}" alt="{{this.title}}">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title"><a href={{this.url}}>{{this.title}}</a></h4>
-            <p class="card-text">{{this.description}}</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">{{this.publishedAt}}</small>
-          </div>
-      </div>
+          <div class="card h-80 m-2">
+            <a href="#">
+              <img class="card-img-top" src="{{this.urlToImage}}" alt="{{this.title}}">
+            </a>
+            <div class="card-body"  style="font-family: 'Open Sans', sans-serif;">
+              <h4 class="card-title"><a href={{this.url}}>{{this.title}}</a></h4>
+              <p class="card-text">{{this.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{this.publishedAt}}</small>
+            </div>
+         </div>
         
        
        </div>

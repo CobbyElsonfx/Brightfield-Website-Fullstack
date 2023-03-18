@@ -8,7 +8,7 @@ const apiKey = process.env.NEWS_API_KEY
 
 fetchNews = async(req,res)=>{
     try {
-        const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}`)
         const newsData = response.data.articles
         res.render("newsfeed" , {newsData})
         console.log(newsData)

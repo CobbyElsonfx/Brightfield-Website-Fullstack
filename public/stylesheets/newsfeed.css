@@ -317,216 +317,24 @@ transform: rotate(0);
 
 
 
-.programsOffered  > .heading {
- margin:5rem;
- padding: 4rem;
 
-  font-size: 4vh;
-  font-weight:bolder;
-  
-}
-.programsOffered{
-  margin-top: 3rem;
-;
-  background-color: #0c1424;
 
-  margin-bottom: 5rem;
-  color: white;
-  height: 100%;
-  
-}
 
-.programsOffered #leftcol{
-height: 30rem;
-background-color:  rgb(216, 208, 208);
-border-radius: 1rem;
 
-margin-bottom: 3rem;
-margin-left: 3rem;
-margin-right: 3rem;
-}
 
-.programsOffered   .rightColContainer{
-height: 30rem;
-background-color: transparent;
-border-radius: 1rem;
 
-margin-bottom: 3rem;
-margin-right: 2rem;
-margin-left: 2rem;
-}
 
 
 
 
-.programsOffered  .rightcols{
-height: 8rem;
-background-color: rgb(228, 224, 224);
-margin-left: 1rem;
-margin-right: 1rem;
-padding: 1Srem;
-border-radius: 1rem;
-}
 
-.rightColContainer  .top{
-margin-top: 0rem;
-}
 
-.rightColContainer  .bottom{
-margin-bottom: 0rem;
-}
 
 
-/* end of progarams section */
 
 
 
 
-
-/* FAQ */
-
-.FAQ{
-margin: auto;
-font-family: 'Poppins', sans-serif; 
-}
-.FAQ > h1 {
-font-weight: bolder;
-font-family: 'Poppins', sans-serif; 
-}
-
-
-/* FAQ */
-
-/* start  of  details and vid section */
-.twoVidSection  {
-margin-top: 3rem;
-margin-bottom: 3rem;
-
-
-}
-
-
-
-
-
-
-/* end  of two  vid section start */
-
-
-/* about founder start */
-.bio  .text-center{
-color: var(--primary);
-  
-}
-
-
-/* about founder end */
-
-
-/* form area  start */
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-font-size: 1rem;
-line-height: 2.15;
-padding-left: .75em;
-padding-right: .75em;
-}
-.card-registration .select-arrow {
-top: 13px;
-}
-
-select{
-line-height: 2.15rem;
-font-size: 1rem;
-padding-left: .75em;
-padding-right: .75em;
-border-style: none;
-}
-
-
-.formstart{
-  margin-top: 3rem;
-}
-
-
-.contactArea{
-background-color:white;
-color: #0c1424;
-margin-bottom: 2rem;
-
-}
-
-.card-body > h6{
-line-height: 1.5rem;
-
-}
-
-.OliverBio p{
-color: rgb(48, 47, 47);
-line-height: 1.90rem;
-width: 80%;
-border-right: 1px solid #0c1424;
-border-left: 1px solid #0c1424;
-padding-left: 1rem;
-padding-right: 1rem;
-}
-
-.OliverBio h4{
-
-margin-bottom: 2rem;
-}
-
-.OliverBio{
-margin-top: 2rem;
-}
-
-#OliverBioimg{
-margin-top: 4rem;
-margin-left: 0rem;
-border-top-left-radius: 5rem;
-}
-/* form area end */
-
-section  .sub{
-background-color: var(--primary);
-color:white;
-}
-
-
-
-/* programmeDesc  start */
-
-.programmeDesc{
-background-color: #0c1424;
-}
-
-
-.programmeDesc blockquote{
-z-index: 1;
-padding-left: 2rem;
-padding-bottom: .5rem;
-padding-top: 3rem;
-color: white;
-padding-left:2rem ;
-padding-right: 2rem;
-margin: auto;
-width: 70%;
-color:#ffffff;
-
-}
-
-.programmeDesc #chief{
-color: white;
-margin-bottom: 3rem;
-
-}
-
-.programmeDesc .wrap{
-margin-bottom: 3rem;
-}
-
-
-
-/* programmeDesc end */
 
 
 
@@ -897,25 +705,11 @@ transform: rotate(0);
   
 
 
-
-/* FAQ */
-
-.FAQ{
-  margin: auto;
-  font-family: 'Poppins', sans-serif; 
-}
-.FAQ > h1 {
-  font-weight: bolder;
-  font-family: 'Poppins', sans-serif; 
-}
-
-
-
   
 
 
   
-/* news section */
+/* news section
   
 .news-container {
   display: flex;
@@ -940,7 +734,7 @@ transform: rotate(0);
   .news-item {
     width: calc(50% - 20px);
   }
-}
+} */
   
   
 

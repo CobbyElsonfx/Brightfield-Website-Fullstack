@@ -57,6 +57,7 @@ app.listen(port, () => {
 ```
 
 In the above code, we have imported the required packages, initialized our express app, and set the port. We have also created a route for fetching news data from the news API using the axios package. The API key is obtained from the .env file, and the data is returned as JSON.
+
 Start your server: In the terminal, run node server.js to start your server.
 
 Test your API: Open your browser or any API testing tool like Postman and navigate to http://localhost:3000/news to see the news data.

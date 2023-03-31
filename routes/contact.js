@@ -1,6 +1,5 @@
 var express = require('express');
 const router = express.Router();
-var Person = require('../models/forms.js')
 var path = require("path")
 var formsController  = require("../controllers/email")
 require("dotenv").config()

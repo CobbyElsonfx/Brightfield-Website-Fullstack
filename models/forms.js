@@ -33,12 +33,14 @@ const formsSchema  =  new mongoose.Schema({
     email:{
         type:String,
         required : true,
-        trim: true
+        trim: true,
+        unique:true,
 
     },
     phoneNumber:{
         type:Number,
         required : true,
+        unique:true
 
     },
     message :{

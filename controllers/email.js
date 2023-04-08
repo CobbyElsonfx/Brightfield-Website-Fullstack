@@ -42,11 +42,8 @@ const userForms =  (req,res) => {
             }
                
             else{
-             //   res.send("okay is working")
              res.render('contactsubmission', {email: email , phoneNumber: phoneNumber ,firstName:firstName , middleName:middleName ,lastName:lastName});
-             console.log(process.env.SENDGRID_API_KEY)
-            //  //after reander send email to client 
-            
+             console.log(process.env.SENDGRID_API_KEY)            
                sgMail.setApiKey(process.env.SENDGRID_API_KEY);
                   const msg = {
                   to: `${email}`,

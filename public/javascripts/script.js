@@ -41,7 +41,7 @@ numberOfDay.innerHTML = cuurentDate
 
 var typed = new Typed('.typing-effect', {
   strings: ["Are you ready to learn ? Join Our  Tech Community of Coders!!"],
-  typeSpeed: 20, // typing speed in milliseconds per character
-  backSpeed: 20, // backspacing speed in milliseconds per character
-  loop: true // loop the animation
+  typeSpeed: 50, // typing speed in milliseconds per character
+  backSpeed: 50, // backspacing speed in milliseconds per character
+  loop: false // loop the animation
 });

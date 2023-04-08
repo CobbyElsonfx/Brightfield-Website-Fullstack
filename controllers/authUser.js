@@ -2,12 +2,12 @@ var usermodel = require('../models/auth')
 
 
 
-const sigup_get = (res,req)=>{
-   res.render('singup')
+const sigup_get = (req,res)=> {
+   res.render("signup")
 }
 
 
-const signup_post = (res,req)=>{
+const signup_post = (req,res)=>{
    const {password , email}  = req.body
     
    const newUser = usermodel.create({password,email})
@@ -17,11 +17,11 @@ const signup_post = (res,req)=>{
 
 
 //login controllers 
-const login_get = (res,req)=>{
+const login_get = (req,res)=>{
    res.send("login get controller ")
 }
 
-const login_post = (res,req)=>{
+const login_post = (req,res)=>{
    res.send("login post controller ")
 }
 

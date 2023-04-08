@@ -437,19 +437,7 @@ transform: rotate(0);
   background-color: rgba(233, 230, 227,0.5) !important;      
 }
 
-/* #secondImageholder{
-  background-image: url(../images/group.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: 1rem;
-  bottom: 1rem;
-  width: 90%;
-  position: absolute; 
-  z-index: -1;  
 
- 
-  
-} */
 .FirstOverlayOfFlipOver2{
   min-height: 20rem;
   
@@ -612,7 +600,17 @@ transform: rotate(0);
   
 }
 
-
+/* typo effects */
+.typing-effect {
+  color: white !important ;
+  z-index: 2;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px black;
+  position: absolute;
+  top: 0.05;
+  left: 2%;
+  width: 85%;
+}
 
 
 /* end  of flipOverthreecards */

@@ -37,3 +37,11 @@ const numberOfDay = document.getElementById("numberOfDays")
 numberOfDay.innerHTML = cuurentDate
 // result: 712
 
+
+
+var typed = new Typed('.typing-effect', {
+  strings: ["Are you ready to learn ? Join Our  Tech Community of Coders!!"],
+  typeSpeed: 20, // typing speed in milliseconds per character
+  backSpeed: 20, // backspacing speed in milliseconds per character
+  loop: true // loop the animation
+});

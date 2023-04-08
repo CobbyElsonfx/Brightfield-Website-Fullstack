@@ -35,8 +35,8 @@ const formsSchema  =  new mongoose.Schema({
         required : true,
         trim: true,
         unique:true,
-
     },
+    
     phoneNumber:{
         type:Number,
         required : true,

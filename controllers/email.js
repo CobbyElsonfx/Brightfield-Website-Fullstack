@@ -1,5 +1,4 @@
 var Person = require('../models/forms.js')
-var express = require('express');
 var path = require("path")
 require("dotenv").config()
 
@@ -10,7 +9,7 @@ var sgMail = require('@sendgrid/mail');
 
 
 
-userForms =  (req,res) => {
+const userForms =  (req,res) => {
  const {firstName,middleName,lastName,age,gender,email,phoneNumber,message} =  req.body;  //destructuring from the req body
      
   Person.findOne({email:email} )
@@ -25,14 +24,14 @@ userForms =  (req,res) => {
               
       else{
          var newPerson = new Person({
-            firstName: firstName,
-            middleName:middleName,
-            lastName: lastName,
-            age: age,
-            gender: gender,
-            email: email,
-            phoneNumber: phoneNumber,
-            message: message
+            firstName,
+            middleName,
+            lastName,
+            age,
+            gender,
+            email,
+            phoneNumber,
+            message
          });
        
          newPerson.save(function(err, Person){

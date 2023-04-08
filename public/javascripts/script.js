@@ -19,7 +19,7 @@ var docWidth = document.documentElement.offsetWidth;
 
 
 //contact view 
-// hiding and displaying of success message
+// hiding and displaying of   success message
 
 
 // document.getElementById("button").onsubmit(ev =>{
@@ -36,3 +36,4 @@ const cuurentDate = Math.round((now - then) / (1000 * 60 * 60 * 24)); // round t
 const numberOfDay = document.getElementById("numberOfDays")
 numberOfDay.innerHTML = cuurentDate
 // result: 712
+

@@ -25,7 +25,7 @@ var programsRouter = require('./routes/programs')
 var mentorshipRouter = require('./routes/mentorship')
 var newsfeed = require('./routes/newsfeed')
 var loginRouter = require("./routes/authLogin")
-var singupRouter = require("./routes/authSignup")
+var signupRouter = require("./routes/authSignup")
 var app = express();
 
 
@@ -57,7 +57,7 @@ app.use('/learn',learnRouter)
 app.use('/programs',programsRouter)
 app.use('/mentorship', mentorshipRouter)
 app.use('/newsfeed', newsfeed)
-app.use('/signup', singupRouter)
+app.use('/signup', signupRouter)
 app.use('/login',loginRouter )
 
 

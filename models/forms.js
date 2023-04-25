@@ -22,7 +22,6 @@ const formsSchema  =  new mongoose.Schema({
         type:Number,
         required : true,
         min:10,
-        trim: true
 
     },
     gender:{

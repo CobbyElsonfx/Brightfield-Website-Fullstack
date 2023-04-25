@@ -63,3 +63,8 @@ Start your server: In the terminal, run node server.js to start your server.
 Test your API: Open your browser or any API testing tool like Postman and navigate to http://localhost:3000/news to see the news data.
 
 That's it! You have now created a news API in Node. You can further customize this API to suit your needs, such as adding additional routes, filters, or pagination.
+
+
+
+## FUNCTIONALITIES: 
+  1. Ability to send emails to individuals who signs up for the program: I was able to achieve this using nodemail, a nodejs package that allows you to send messages. I also used the available template on sendGrid, SendGrid is an online email site that  provides already formatted emails templates one choose from customise to meet their needs

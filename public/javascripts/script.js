@@ -5,16 +5,16 @@
 // }
 
 
-var docWidth = document.documentElement.offsetWidth;
+// var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
+// [].forEach.call(
+//   document.querySelectorAll('*'),
+//   function(el) {
+//     if (el.offsetWidth > docWidth) {
+//       console.log(el);
+//     }
+//   }
+// );
 
 
 
@@ -27,15 +27,7 @@ var docWidth = document.documentElement.offsetWidth;
 // }).preventDefault()
 
 
-//COUNTER FOR DAYS
-var then = new Date(2021, 10, 02), // month is zero based
-now  = new Date;               // no arguments -> current date
 
-// 24 hours, 60 minutes, 60 seconds, 1000 milliseconds
-const cuurentDate = Math.round((now - then) / (1000 * 60 * 60 * 24)); // round the amount of days
-const numberOfDay = document.getElementById("numberOfDays")
-numberOfDay.innerHTML = cuurentDate
-// result: 712
 
 
 
@@ -45,3 +37,4 @@ var typed = new Typed('.typing-effect', {
   backSpeed: 50, // backspacing speed in milliseconds per character
   loop: false // loop the animation
 });
+

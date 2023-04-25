@@ -109,3 +109,31 @@
       </div>
     </div>
   </div>
+  <script>
+
+    const form = document.querySelector("form")
+
+    form.addEventListener("submit", async (ev)=>{
+        ev.preventDefault()
+
+
+        const email = form.email.value
+        const password = form.password.value
+        try {
+            const res = await fetch("/login", {
+                method:"POST",
+                body: JSON.stringify({email,password}),
+                headers: {"Content-type":"application/json"}
+
+            })
+            
+
+            const data = await res.json()
+            console.log(data)  
+            console.log(res)      
+        } 
+        catch (error) {
+            console.log(error)
+        }
+    })
+    </script>

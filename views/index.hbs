@@ -173,7 +173,7 @@
                   <div class="col-xm-12  col-sm-4   col-md-4  col-lg-4"> 
                     <div style="text-align: center;"  id="centerCounterArea">
                         <span >  <i class="fa-solid fa-thumbs-up  fa-5x"></i> </span>
-                        <h1  style="margin: auto ;" id="numberOfDays"></h1>
+                        <h1  style="margin: auto ;" id="numberOfDays">0</h1>
                         <h4>Days since Brightfied was lauched </h4>
                     </div>
                   </div>
@@ -334,18 +334,26 @@
         </div><!--col-->
 
       </div> <!--row-->
-    </div> <!--container->
+    </div> 
   </section>
-  <!-- end of flip over three cards center  -->
 
-  <div id="floatn"  style="top: 50%; left: 0; position: fixed;  z-index: 4; margin-left: 20px;
- 
- 
-  " >
+  <div id="floatn"  style="top: 50%; left: 0; position: fixed;  z-index: 4; margin-left: 20px; " >
   <a href="#">
     <img      src="images/2ndlogoofcode.webp" alt="">
   </a>
 </div>
+<script>
+      //COUNTER FOR DAYS
+     const  then = new Date(2021, 10, 02)// month is zero based
+     const current  = new Date;               // no arguments -> current date
+
+      // 24 hours, 60 minutes, 60 seconds, 1000 milliseconds
+      const currentDate = Math.round((current - then) / (1000 * 60 * 60 * 24)); // round the amount of days
+      const numberOfDay = document.getElementById("numberOfDays")
+      console.log(numberOfDay)
+      numberOfDay.innerHTML = currentDate
+      // result: 712
+          </script>
 
 
 

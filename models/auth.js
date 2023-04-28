@@ -22,14 +22,29 @@ const userSchema  =  new mongoose.Schema({
 //hash password before it is save in db
 //dont use an arrow function here
 userSchema.pre("save", async function(next) {
- const salt = await bcrypt.genSalt(10)
+ const salt = await bcrypt.genSalt()
  this.password = await bcrypt.hash(this.password,salt)
  next()
 })
 
 
 
+//static method to login  users
+//We use a static method for authentication in this case because the method should be called on the model itself, rather than on an instance of the model. The reason for this 
+//is that we need to query the database to find the user based on their email, and we want to keep this logic in the model layer.
+userSchema.statics.login = async function(email, password){
 
+    const user = await  this.findOne({email})  // the find represents the user model so it could have been userSchema.fin
+    if(user){
+     const auth = await bcrypt.compare(password, user.password) // auth becomes truthy so we can say if it succeds it comparing it do that ...
+     if(auth){
+        return user
+     }
+     throw Error ("Invalid Password")
+    }
+    throw  Error ("Email not registered")
+
+}
 
 
 const User = mongoose.model("user", userSchema)

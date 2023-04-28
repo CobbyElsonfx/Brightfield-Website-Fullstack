@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const authControllers  = require("../controllers/authUser")
+const loginControllers  = require("../controllers/login")
 
 //sign up routes 
 
@@ -8,8 +8,8 @@ const authControllers  = require("../controllers/authUser")
 
 
 const loginRoute = router.route("/")
-.get(authControllers.login_get)
-.post(authControllers.login_post)
+.get(loginControllers.login_get)
+.post(loginControllers.login_post)
 
 
 module.exports = router

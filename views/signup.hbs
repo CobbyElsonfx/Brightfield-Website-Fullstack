@@ -1,87 +1,128 @@
-<section>
-  <div class="container h-100 mb-5">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/forms.css">
+</head>
+<!-- Section: Design Block -->
+<section class="">
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            The best offer <br />
+            <span class="text-primary">for your business</span>
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+            quibusdam tempora at cupiditate quis eum maiores libero
+            veritatis? Dicta facilis sint aliquid ipsum atque?
+          </p>
+        </div>
 
-                <form id="form" class="mx-1 mx-md-4">
-
-                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" />
-                      <label class="form-label" for="form3Example1c">Your Name</label>
-                    </div>
-                  </div> --}}
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <span class="emailError"></span>
-                      <input type="text" class="form-control email" name="email"  required/>
-                      <label class="form-label email" for="form3Example3c">Your Email</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                        <span class="passwordError"></span>
-                      <input type="password"  class="form-control password" name="password" />
-                      <label class="form-label" for="password" >Password</label>
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="firstName" class="form-control" />
+                      <label class="form-label" for="firstName">First name</label>
                     </div>
                   </div>
-
-                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" class="form-control" />
-                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="lastName" class="form-control" />
+                      <label class="form-label" for="lastName">Last name</label>
                     </div>
-                  </div> --}}
-
-                  <div class="form-check d-flex justify-content-center mb-5">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                    <label class="form-check-label" for="form2Example3">
-                      I agree all statements in <a href="#!">Terms of service</a>
-                    </label>
                   </div>
+                </div>
 
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                <!-- Email input -->
+                <span style="font-size:small;" class="text-danger" id="emailError"></span>
+                <div class="form-outline mb-4">
+                  <input type="text" class="form-control email" name="email"  required/>
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+
+                <!-- Password input -->
+                 <span style="font-size:small;" class="text-danger" id="passwordError"></span>
+                <div class="form-outline mb-4">
+                  <input type="password"  class="form-control password" name="password"  required/>
+                  <label class="form-label" for="password">Password</label>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked  />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Sign up
+                </button>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                  </button>
+
+                  <div>
+                     <div>
+                        <p class=" text-center pb-4 small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href="/login"
+                            class="link-danger">Login</a></p>
+                      </div>
                   </div>
-
-                </form>
-
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  class="img-fluid" alt="Sample image">
-
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Jumbotron -->
 </section>
+<!-- Section: Design Block -->
+
+
 <script>
 
 const form = document.querySelector("form")
 
 form.addEventListener("submit", async (ev)=>{
     ev.preventDefault()
-
-
+    
     const email = form.email.value
     const password = form.password.value
+    const passwordError = document.getElementById("passwordError")
+const emailError = document.getElementById("emailError")
+    
+    //set forms to null after submisiion
+    passwordError.textContent = ""
+    emailError.textContent = ""
+     
     try {
         const res = await fetch("/signup", {
             method:"POST",
@@ -92,8 +133,16 @@ form.addEventListener("submit", async (ev)=>{
         
 
         const data = await res.json()
-        console.log(data)  
-        console.log(res)      
+        if(data.user){
+          location.assign("/")
+        }
+
+        if(data.error){
+          emailError.textContent = data.error.email
+          passwordError.textContent = data.error.password
+
+        }
+
     } 
     catch (error) {
         console.log(error)

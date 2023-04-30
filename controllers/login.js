@@ -6,6 +6,14 @@ const bcrypt = require("bcrypt")
 const handleError = (err)=>{
    console.log(err.message, err.code)
    const error = {email:"", password:""}
+  if(err.message.includes("user validation failed")){
+   Object.values(err.error).forEach(({properties})=> {
+      error[properties.path] = properties.message
+   } )
+
+  }
+   
+
    if(err.message == "Invalid Password"){
       error.password = "Password is Invalid"
    }
@@ -44,10 +52,9 @@ const login_post = async (req,res)=>{
     }
     
    } catch (error) {
-    res.status(400).json({error: "Errors in your code"})
-    console.error(error)
-    handleError(error)
-    
+    const errors = handleError(error)
+    console.log(errors)
+    res.status(400).json({error:errors})
    }
 
 }

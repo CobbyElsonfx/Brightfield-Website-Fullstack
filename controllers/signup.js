@@ -44,6 +44,9 @@ const signup_get = (req,res)=> {
 }
 
 
+
+
+ 
 const signup_post = async (req,res)=>{
    const {password , email}  = req.body
    try {

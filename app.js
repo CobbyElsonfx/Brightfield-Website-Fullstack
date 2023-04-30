@@ -11,10 +11,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 
-//
+//in built middlewares
 const hbs = require('express-handlebars');
 const hbshelpers = require('handlebars-helpers');
 const multihelpers = hbshelpers();
+//custom middlewares
+const {requireAuth } = require("./middleware/requireAuth")
 //importing various routers
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -56,7 +58,7 @@ app.use('/contact', contactRouter)
 app.use('/learn',learnRouter)
 app.use('/programs',programsRouter)
 app.use('/mentorship', mentorshipRouter)
-app.use('/newsfeed', newsfeed)
+app.use('/newsfeed', requireAuth ,  newsfeed)
 app.use('/signup', signupRouter)
 app.use('/login',loginRouter )
 

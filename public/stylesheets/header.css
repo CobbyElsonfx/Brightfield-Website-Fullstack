@@ -23,15 +23,16 @@
     font-size: x-small;
     position: absolute;
     top: -20px;
-    right: 1px;
-
+    right: 15px;
+    color: var(--primary);
+  
 
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar-nav  > span {
       display: none !important;
       color: white;
     }
-  }
+  } */
   

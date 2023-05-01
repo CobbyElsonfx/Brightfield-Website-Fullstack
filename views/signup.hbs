@@ -30,13 +30,13 @@
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                      <input type="text" id="firstName" class="form-control" />
+                      <input type="text" id="firstName" class="form-control firstName" name="firstName"  required />
                       <label class="form-label" for="firstName">First name</label>
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                      <input type="text" id="lastName" class="form-control" />
+                       <input type="text" id="lastName" class="form-control lastName" name="lastName"  required />
                       <label class="form-label" for="lastName">Last name</label>
                     </div>
                   </div>
@@ -116,9 +116,13 @@ form.addEventListener("submit", async (ev)=>{
     
     const email = form.email.value
     const password = form.password.value
+
+    const firstName = form.firstName.value
+    const lastName = document.getElementById("lastName").value
+
     const passwordError = document.getElementById("passwordError")
     const emailError = document.getElementById("emailError")
-    
+    console.log(lastName, "i am username")
     //set forms to null after submisiion
     passwordError.textContent = ""
     emailError.textContent = ""
@@ -126,7 +130,7 @@ form.addEventListener("submit", async (ev)=>{
     try {
         const res = await fetch("/signup", {
             method:"POST",
-            body: JSON.stringify({email,password}),
+            body: JSON.stringify({email,password,firstName,lastName}),
             headers: {"Content-type":"application/json"}
 
         })

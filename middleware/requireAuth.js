@@ -29,17 +29,24 @@ const checkUser = async (req,res,next) => {
         if(token){
             const auth = await jwt.verify(token,"btn2022", async (err,decodedToken)=>{
              if(err){
-                next()
-                res.locals.user = null
+                res.locals.lastName= null
+                res.locals.firstName= null
+               next()
              }else{
                  const  user =  await usermodel.findById(decodedToken.id)
-                 res.locals.username= user.email
+                 if(user == null){
+                    next()
+                 }
+                 console.log(user)
+                 res.locals.lastName = user.firstName
+                 res.locals.firstName= user.lastName
                  next()
              }
             })
             
          }else{ 
-            res.locals.user = null
+            res.locals.lastName= null
+            res.locals.firstName= null
             next()
          }
         

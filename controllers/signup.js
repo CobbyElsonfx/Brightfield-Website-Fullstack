@@ -48,9 +48,10 @@ const signup_get = (req,res)=> {
 
  
 const signup_post = async (req,res)=>{
-   const {password , email}  = req.body
+   const {password , email,firstName,lastName}  = req.body
+   console.log(lastName,email,firstName,password , "from the controller")
    try {
-      const newUser = await usermodel.create({password,email})
+      const newUser = await usermodel.create({password,email,firstName,lastName})
       const token = createToken(newUser._id)
       res.cookie("jwt", token, {maxAge:2*24*60*60*1000,httpOnly:true} )
       res.status(200).json({user:newUser._id})      

@@ -74,7 +74,7 @@ overflow-x:hidden !important;
 nav .show  ul > li{
   margin: auto;
   transition: all 300ms;
-  padding-top: 2rem;
+  padding-top: 1rem;
  
 }
 

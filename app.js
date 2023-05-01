@@ -1,11 +1,11 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const dbConnect = require("./db/connect")
-var bodyParser = require('body-parser');
-var multer = require('multer');
+const bodyParser = require('body-parser');
+const multer = require('multer');
 const port = process.env.PORT || 8585;
 const dotenv = require("dotenv");
 dotenv.config();
@@ -16,19 +16,21 @@ const hbs = require('express-handlebars');
 const hbshelpers = require('handlebars-helpers');
 const multihelpers = hbshelpers();
 //custom middlewares
-const {requireAuth } = require("./middleware/requireAuth")
-//importing various routers
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var aboutRouter = require('./routes/mentorship')
-var contactRouter = require('./routes/contact')
-var learnRouter = require('./routes/learn')
-var programsRouter = require('./routes/programs')
-var mentorshipRouter = require('./routes/mentorship')
-var newsfeed = require('./routes/newsfeed')
-var loginRouter = require("./routes/authLogin")
-var signupRouter = require("./routes/authSignup")
-var app = express();
+const {requireAuth ,checkUser } = require("./middleware/requireAuth")
+
+//importing  routers
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const aboutRouter = require('./routes/mentorship')
+const contactRouter = require('./routes/contact')
+const learnRouter = require('./routes/learn')
+const programsRouter = require('./routes/programs')
+const mentorshipRouter = require('./routes/mentorship')
+const newsfeed = require('./routes/newsfeed')
+const loginRouter = require("./routes/authLogin")
+const signupRouter = require("./routes/authSignup")
+const logout = require("./routes/authLogout")
+const app = express();
 
 
 // view engine setup
@@ -51,16 +53,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/about',aboutRouter)
-app.use('/contact', contactRouter)
-app.use('/learn',learnRouter)
-app.use('/programs',programsRouter)
-app.use('/mentorship', mentorshipRouter)
-app.use('/newsfeed', requireAuth ,  newsfeed)
-app.use('/signup', signupRouter)
+// app.get("*",checkUser)
+app.use('/',checkUser, indexRouter);
+app.use('/users',checkUser ,usersRouter);
+app.use('/about',checkUser,aboutRouter)
+app.use('/contact',checkUser,requireAuth, contactRouter)
+app.use('/learn',checkUser,learnRouter)
+app.use('/programs',checkUser,programsRouter)
+app.use('/mentorship',checkUser, mentorshipRouter)
+app.use('/newsfeed', checkUser,requireAuth ,  newsfeed)
+app.use('/signup', checkUser,signupRouter)
 app.use('/login',loginRouter )
+app.use("/logout", logout)
 
 
 

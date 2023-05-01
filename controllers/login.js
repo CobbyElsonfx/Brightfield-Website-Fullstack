@@ -7,18 +7,18 @@ const handleError = (err)=>{
    console.log(err.message, err.code)
    const error = {email:"", password:""}
   if(err.message.includes("user validation failed")){
-   Object.values(err.error).forEach(({properties})=> {
+   Object.values(err.errors).forEach(({properties})=> {
       error[properties.path] = properties.message
    } )
 
   }
    
 
-   if(err.message == "Invalid Password"){
+   if(err.password == "Invalid Password"){
       error.password = "Password is Invalid"
    }
 
-   if(err.message == "Email not registered"){
+   if(err.email == "Email not registered"){
       error.email = "Email not registerd"
    }
 
@@ -38,22 +38,20 @@ const login_get = (req,res)=>{
 }
 
 
-
 //post controller
 const login_post = async (req,res)=>{
    const {password,email} = req.body
 
    try {
-    const user = await usermodel.login(email,password) 
-    if(user){
+    const newUser = await usermodel.login(email,password) 
+    if(newUser){
       const token = createToken(newUser._id)
       res.cookie("jwt", token, {maxAge:2*24*60*60*1000,httpOnly:true} )
-      res.status(200).json({user:user._id}) 
+      res.status(200).json({user:newUser._id}) 
     }
     
    } catch (error) {
     const errors = handleError(error)
-    console.log(errors)
     res.status(400).json({error:errors})
    }
 

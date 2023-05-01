@@ -1,30 +1,30 @@
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../../stylesheets/header.css">
+</head>
+ 
  <header>
       <!-- nav bar start -->
-       <div class= "navext" style="  background-color: var(--primary);
-  height: 6rem;
-  width:100vw;
-  overflow-y: hidden;
-">
+       <div class= "navext" style="  background-color: var(--primary); height: 6rem; width:100vw; overflow-y: hidden;">
             <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
-              <div class="container-fluid">
+              <div class="container-fluid ">
                
                   <img style="max-height: 25%; max-width: 18%; overflow: hidden; margin-left: 1rem;" src="images/logohd.jpg"   alt=""  loading="lazy"/>
             
                  
-                  <button class="navbar-toggler  collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-                  aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="toggler-icon top-bar">
-                    <!-- <i class="fas fa-bars"></i> -->
-                  </span>
-                  <span class="toggler-icon middle-bar">
-                    <!-- <i class="fas fa-bars"></i> -->
-                  </span>
-                  <span class="toggler-icon bottom-bar">
-                    <!-- <i class="fas fa-bars"></i> -->
-                  </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarExample01">
-                  <ul class="navbar-nav ms-auto mb-2 mb-sm-0 align-items-center">
+                  <button class="navbar-toggler  collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar">
+                      <!-- <i class="fas fa-bars"></i> -->
+                    </span>
+                    <span class="toggler-icon middle-bar">
+                      <!-- <i class="fas fa-bars"></i> -->
+                    </span>
+                    <span class="toggler-icon bottom-bar">
+                      <!-- <i class="fas fa-bars"></i> -->
+                    </span>
+                  </button>
+                <div class="collapse navbar-collapse " id="topNavbar">
+                  <ul class="navbar-nav ms-auto  mb-2 mb-sm-0  align-items-center">
                     <li class="nav-item" >
                       <a class="nav-link active"   aria-current="page" href="/">Home
                       </a>
@@ -47,7 +47,8 @@
                     </li>
         
                   </ul>
-            
+
+                   
                   <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
                       <a class="nav-link px-2" . target="_blank" href="https://web.facebook.com/groups/btadevcommunity">
@@ -66,29 +67,17 @@
                     </li>
                    
                   </ul>
-                  <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link text-center"  id="applynow"  style="color: white; background-color: var(--primary) !important; /* margin-right: 1rem ; */
-                      margin-left: 1rem;
-                      padding-right: 1rem;
-                      padding-top: 1rem;
-                      padding-bottom: 1rem;
-                      padding-left: 1rem;
-                      margin-right: 1rem;
-                      /* margin-right: 2rem; */
-                      font-size: small;"  aria-current="page" href="/login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-center"  id="applynow"  style="color: white; background-color: var(--primary) !important; /* margin-right: 1rem ; */
-                      margin-left: 1rem;
-                      padding-right: 1rem;
-                      padding-top: 1rem;
-                      padding-bottom: 1rem;
-                      padding-left: 1rem;
-                      margin-right: 1rem;
-                      /* margin-right: 2rem; */
-                      font-size: small;"  aria-current="page" href="/logout">Login</a>
-                    </li>
+                  <ul class="navbar-nav mb-2 mb-lg-0 text-center" style="position:relative;">
+                       {{#if username}}
+                        <li  class="nav-item authbutton">
+                        <a class="nav-link text-center"  id="applynow"  style=""  aria-current="page" href="/logout">Logout</a>
+                        </li>
+                       {{else}}
+                        <li  class="nav-item authbutton">
+                         <a class="nav-link text-center"  id="applynow"  style=""  aria-current="page" href="/login">Login</a>
+                       </li>
+                       {{/if}}
+
                   </ul>
                 </div>
               </div>

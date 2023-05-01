@@ -63,5 +63,5 @@ const signup_post = async (req,res)=>{
 
 module.exports =  {
    signup_post,
-   signup_get, 
+   signup_get
 }

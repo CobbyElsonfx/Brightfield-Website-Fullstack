@@ -113,7 +113,9 @@ const form = document.querySelector("form")
 
 form.addEventListener("submit", async (ev)=>{
     ev.preventDefault()
+    //set forms to null after submisiion
     
+
     const email = form.email.value
     const password = form.password.value
 
@@ -122,10 +124,9 @@ form.addEventListener("submit", async (ev)=>{
 
     const passwordError = document.getElementById("passwordError")
     const emailError = document.getElementById("emailError")
-    console.log(lastName, "i am username")
-    //set forms to null after submisiion
     passwordError.textContent = ""
     emailError.textContent = ""
+    
      
     try {
         const res = await fetch("/signup", {

@@ -19,8 +19,13 @@ const handleError = (err)=>{
    }
 
    if(err.email == "Email not registered"){
-      error.email = "Email not registerd"
+      error.email = "Email not registered"
    }
+
+
+   if(error.code ==  11000){
+      errors.email = "Email already exist"
+  }
 
    
 }

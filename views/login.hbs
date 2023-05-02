@@ -13,14 +13,14 @@
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
         <form>
           <!-- Email input -->
-          <span id="emailError"></span>
+           <span style="font-size:small;" class="text-danger" id="emailError"></span>
           <div class="form-outline mb-4">
             <input type="email" id="email" class="form-control form-control-lg"  name="email"/>
             <label class="form-label" for="email">Email address</label>
           </div>
 
           <!-- Password input -->
-          <span id="passwordError"></span>
+           <span style="font-size:small;" class="text-danger" id="passwordError"></span>
           <div class="form-outline mb-4">
             <input type="password" id="password" class="form-control form-control-lg" name="password" />
             <label class="form-label" for="password">Password</label>
@@ -93,8 +93,8 @@ form.addEventListener("submit", async (ev)=>{
           location.assign("/")
         }
         if(data.error){
-          passwordError.textContent  = data.error.password
           emailError.textContent = data.error.email
+          passwordError.textContent = data.error.password
         }
         
     } 

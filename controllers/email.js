@@ -1,127 +1,90 @@
-var Person = require('../models/forms.js')
-var path = require("path")
-require("dotenv").config()
+var Person = require("../models/forms.js");
+var path = require("path");
+var sgMail = require("@sendgrid/mail");
+require("dotenv").config();
+
 
 // const nodemailer = require('nodemailer');
 // const hbs = require('nodemailer-express-handlebars')
-var sgMail = require('@sendgrid/mail');
 
 
 
 
-const userForms =  (req,res) => {
- const {firstName,middleName,lastName,age,gender,email,phoneNumber,message} =  req.body;  //destructuring from the req body
-     
-  Person.findOne({email:email} )
-  .then(user=> {
+const userForms = function(req,res) {
+const {age,
+       email,
+       firstName,
+       gender,
+       lastName,
+       message,
+       middleName,
+       phoneNumber} =  req.body;  //destructuring from the req body
+  Person.findOne({email} )
+  .then((user) => {
     if(user){
       res.send(`<script>
                   alert("Email already exist."); 
                   window.location.href = "/contact"; 
                </script>`
                );
-              } 
-              
+    }
       else{
-         var newPerson = new Person({
-            firstName,
-            middleName,
-            lastName,
-            age,
-            gender,
-            email,
-            phoneNumber,
-            message
+         const newPerson = new Person({
+           age,
+           email,
+           firstName,
+           gender,
+           lastName,
+           message,
+           middleName,
+           phoneNumber
          });
-       
          newPerson.save(function(err, Person){
             if(err){
-             console.log(err)
-             res.redirect('contact', {message: "Database error", type: "error"});
+             res.redirect("contact", {
+                                      message:"Database error",
+                                      type: "error"
+                                     });
            // res.send("err facing")
             }
-               
             else{
-             res.render('contactsubmission', {email: email , phoneNumber: phoneNumber ,firstName:firstName , middleName:middleName ,lastName:lastName});
-             console.log(process.env.SENDGRID_API_KEY)            
+            res.render("contactsubmission", {  age,
+                                               email,
+                                               firstName,
+                                               gender,
+                                               lastName,
+                                               message,
+                                               middleName,
+                                               phoneNumber});
                sgMail.setApiKey(process.env.SENDGRID_API_KEY);
                   const msg = {
+                  from: "andohfrancis9187@gmail.com",
                   to: `${email}`,
-                  from: 'andohfrancis9187@gmail.com',
-                  templateId: 'd-9869dcbdb55a47d2acdaa13934d5f550',
+                  templateId: "d-9869dcbdb55a47d2acdaa13934d5f550",
                   dynamicTemplateData: {
-                     subject: 'Testing Templates',
+                     subject: "Testing Templates",
                      name: `${firstName} ${ middleName} ${lastName}`,
                      city: 'Ghana',
                   },
                   };
                   sgMail.send(msg).then(()=>{
-                     console.log("email sent successfully")
+                     console.log("email sent successfully");
                   }).catch((err)=>{
-                        console.log(err)
+                        console.log(err);
                   })
 
-
-
-            //using nodemailer for sending messages
-
-   //             const transporter = nodemailer.createTransport({
-   //             service: 'gmail',
-   //             auth: {
-   //                user: 'andohfrancis9187@gmail.com',
-   //                pass: 'ipejtgjjarpugifu'
-   //                // pass: '0558119187A' // naturally, replace both with your real credentials or an application-specific password
-   //             }
-   //             });
-
-   //          // Now we create an email template but first, we have to allow nodemail to compile the handlebars. 
-   //          //For this, we have a middleware transport.use()
-   //             const handlebarOptions = {
-   //                viewEngine: {
-   //                   extName: '.hbs',
-   //                    partialsDir: path.resolve('./views/'),
-   //                    defaultLayout: false,
-   //                },
-   //                viewPath: path.resolve('./views/'),
-   //                extName: '.hbs',
-   //            };
-
-   //            // use a template file with nodemailer
-   //             transporter.use('compile', hbs(handlebarOptions))
-
-   //             const mailOptions = {
-   //             from: 'andohfrancis9187@gmail.com',
-   //             to: `${email}`,
-   //             subject: 'Thank you for joining us',
-   //            template: 'email', // the name of the template file i.e email.handlebars
-   //             context:{
-   //                name: `${firstName}  ${middleName} ${lastName}`, // replace {{name}} with Adebola
-
-   //             }
-   //             };
-
-   //             transporter.sendMail(mailOptions, function(error, info){
-   //             if (error) {
-   //                console.log(error);
-   //             } else {
-   //                console.log('Email sent: ' + info.response);
-   //             }
-   //             });
-                  
                    } }
               );
              }
 
 
 
-      }).catch(err => {
-          console.log(err)
-      })
-
-     }
-   
+      }).catch((err) => {
+          console.log(err);
+      });
+     };
 
 
      module.exports = {
-      userForms   
-    }
+      userForms
+    };

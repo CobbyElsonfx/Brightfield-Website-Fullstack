@@ -8,14 +8,14 @@ const requireAuth = async (req,res,next) =>{
        const auth = await jwt.verify(token,"btn2022", (err,decodedToken)=>{
         if(err){
             console.log(err.message)
-            res.redirect("/login")
+            res.redirect("/user/login")
         }else{
             next()
         }
        })
        
     }else{ 
-      res.redirect("/login")
+      res.redirect("/user/login")
     }
 
 }

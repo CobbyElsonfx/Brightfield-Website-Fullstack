@@ -51,10 +51,13 @@ userSchema.statics.login = async function(email, password){
      const auth = await bcrypt.compare(password, user.password) // auth becomes truthy so we can say if it succeds it comparing it do that ...
      if(auth){
         return user
+     }{
+        throw Error("Invalid Password")
      }
-     throw Error ("Invalid Password")
+    }else{
+        throw  Error("Email not registered")
     }
-    throw  Error ("Email not registered")
+    
 
 }
 

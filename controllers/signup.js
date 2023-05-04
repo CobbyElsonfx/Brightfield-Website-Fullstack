@@ -49,7 +49,7 @@ const signup_get = (req,res)=> {
  
 const signup_post = async (req,res)=>{
    const {password , email,firstName,lastName}  = req.body
-   console.log(lastName,email,firstName,password , "from the controller")
+   console.log(lastName,email,firstName,password , "from the controller in maths")
    try {
       const newUser = await usermodel.create({password,email,firstName,lastName})
       const token = createToken(newUser._id)

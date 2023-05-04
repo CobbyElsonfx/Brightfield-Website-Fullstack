@@ -15,7 +15,7 @@ const jwt = require("jsonwebtoken")
 const logout_get = async (req,res)=>{
    try {
       res.cookie("jwt", "", {maxAge:1,httpOnly:true} )
-      res.redirect("/login")
+      res.redirect("user/login")
    } catch (error) {
     console.log(error)
     }

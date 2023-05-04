@@ -4,30 +4,30 @@ const bcrypt = require("bcrypt")
 
 
 const handleError = (err)=>{
-   console.log(err.message, err.code)
-   const error = {email:"", password:""}
-  if(err.message.includes("user validation failed")){
-   Object.values(err.errors).forEach(({properties})=> {
-      error[properties.path] = properties.message
-   } )
 
-  }
-   
-
-   if(err.password == "Invalid Password"){
-      error.password = "Password is Invalid"
-   }
-
-   if(err.email == "Email not registered"){
-      error.email = "Email not registered"
-   }
-
-
-   if(error.code ==  11000){
-      errors.email = "Email already exist"
+   let errors = { email: '', password: '' };
+  // incorrect email
+  if (err.message === "Email not registered") {
+    errors.email = 'That email is not registered';
   }
 
-   
+  // incorrect password
+  if (err.message === 'Invalid Password') {
+    errors.password = 'That password is incorrect';
+  }
+
+  
+
+  // validation errors
+  if (err.message.includes('user validation failed')) {
+    console.log(err,"here is the err");
+    Object.values(err.errors).forEach(({ properties }) => {
+      console.log(properties, "here is the properties");
+      errors[properties.path] = properties.message;
+    });
+  }
+
+  return errors
 }
 
 
@@ -36,6 +36,9 @@ const handleError = (err)=>{
 const createToken = (id)=>{
    return jwt.sign({id}, "btn2022" , {expiresIn: 2*24*60*60} )
 }
+
+
+
 
 //login controllers 
 const login_get = (req,res)=>{
@@ -49,6 +52,7 @@ const login_post = async (req,res)=>{
 
    try {
     const newUser = await usermodel.login(email,password) 
+    console.log(newUser)
     if(newUser){
       const token = createToken(newUser._id)
       res.cookie("jwt", token, {maxAge:2*24*60*60*1000,httpOnly:true} )
@@ -57,7 +61,7 @@ const login_post = async (req,res)=>{
     
    } catch (error) {
     const errors = handleError(error)
-    res.status(400).json({error:errors})
+    res.status(400).json({errors})
    }
 
 }

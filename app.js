@@ -62,9 +62,9 @@ app.use('/learn',checkUser,learnRouter)
 app.use('/programs',checkUser,programsRouter)
 app.use('/mentorship',checkUser, mentorshipRouter)
 app.use('/newsfeed', checkUser,requireAuth ,  newsfeed)
-app.use('/signup', checkUser,signupRouter)
-app.use('/login',loginRouter )
-app.use("/logout", logout)
+app.use('/user/signup',signupRouter)
+app.use('/user/login',loginRouter )
+app.use("/user/logout", logout)
 
 
 

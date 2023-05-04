@@ -9,7 +9,7 @@
             <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
               <div class="container-fluid ">
                
-                  <img style="max-height: 25%; max-width: 18%; overflow: hidden; margin-left: 1rem;" src="images/logohd.jpg"   alt=""  loading="lazy"/>
+                  <img style="max-height: 25%; max-width: 18%; overflow: hidden; margin-left: 1rem;" src="../../images/logohd.jpg"   alt=""  loading="lazy"/>
             
                   {{#if lastName  }}
                         
@@ -74,11 +74,11 @@
                        {{#if lastName}}
                         <span class="d-none d-md-block d-lg-block ">{{firstName}} {{lastName}}</span>
                         <li  class="nav-item authbutton">
-                        <a class="nav-link text-center"  id="applynow"  style=""  aria-current="page" href="/logout">Logout</a>
+                        <a class="nav-link text-center"  id="applynow"  style=""  aria-current="page" href="/user/logout">Logout</a>
                         </li>
                        {{else}}
                         <li  class="nav-item authbutton">
-                         <a class="nav-link text-center"  id="applynow"  style=""  aria-current="page" href="/login">Login</a>
+                         <a class="nav-link text-center"  id="applynow"  style=""  aria-current="page" href="/user/login">Login</a>
                        </li>
                        {{/if}}
 

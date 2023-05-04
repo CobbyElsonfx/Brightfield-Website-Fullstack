@@ -11,6 +11,7 @@
           class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        
         <form>
           <!-- Email input -->
            <span style="font-size:small;" class="text-danger" id="emailError"></span>
@@ -37,7 +38,7 @@
             <a href="#!">Forgot password?</a>
           </div>
           <div>
-            <p class=" text-center pb-4 small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/signup"
+            <p class=" text-center pb-4 small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/user/signup"
                 class="link-danger">Register</a></p>
           </div>
 
@@ -80,7 +81,7 @@ form.addEventListener("submit", async (ev)=>{
     emailError.textContent = ""
     
     try {
-        const res = await fetch("/login", {
+        const res = await fetch("/user/login", {
             method:"POST",
             body: JSON.stringify({email,password}),
             headers: {"Content-type":"application/json"}
@@ -92,9 +93,10 @@ form.addEventListener("submit", async (ev)=>{
         if(data.user){
           location.assign("/")
         }
-        if(data.error){
-          emailError.textContent = data.error.email
-          passwordError.textContent = data.error.password
+
+        if(data.errors){
+          emailError.textContent = data.errors.email
+          passwordError.textContent = data.errors.password
         }
         
     } 

@@ -1,4 +1,4 @@
-const usermodel = require('../models/auth')
+const usermodel = require("../models/auth")
 const jwt = require("jsonwebtoken") 
 const bodyParser = require('body-parser');
 

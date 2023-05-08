@@ -27,35 +27,102 @@
     </div>
 
 
-    <div class="container">  
-      <marquee data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="h5 text-shadow-lg text-primary " style="font-family: 'Open Sans', sans-serif;"> <a> Thank you for visiting my website and reading my blog. My goal is to provide you with valuable information and insights on a variety of topics related to Techonology</a></marquee>
-    <div class="row">
-      {{#each newsData}}
-        <div class="col-xm-12 col-sm-6 col-md-4">
-          <div class="card h-80 m-2">
-            <a href="#">
-              <img class="card-img-top" src="{{this.urlToImage}}" alt="{{this.title}}">
-            </a>
-            <div class="card-body"  style="font-family: 'Open Sans', sans-serif;">
-              <h4 class="card-title"><a href={{this.url}}>{{this.title}}</a></h4>
-              <p class="card-text">{{this.description}}</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">{{this.publishedAt}}</small>
-            </div>
-         </div>
-        
-       
-       </div>
-       
-      {{/each}}
-    </div>
-      
-     
-                 
-    
+    {{!--  --}}
+     <div id="otherDetails">
 
-    </div>    <!--programsofferedcontainer-->
+            <section class="text-center text-lg-start bg-light container shadow mt-4">    
+                <div id="firstSectionInOtherDetails">
+                    <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="tab" href="#ex3-tabs-1" role="tab" aria-controls="ex3-tabs-1" aria-selected="true">Insider</a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="ex3-tab-2"  data-mdb-toggle="tab" href="#ex3-tabs-2" role="tab" aria-controls="ex3-tabs-2" aria-selected="false">TECH TALK</a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="ex3-tab-3" data-mdb-toggle="tab" href="#ex3-tabs-3" role="tab" aria-controls="ex3-tabs-3" aria-selected="false" >CODE CULTURE</a>
+                        </li>
+                    </ul>
+                    <!-- Tabs navs -->
+                    
+                    <!-- Tabs content -->
+                    <div class="tab-content" id="ex2-content">
+
+                        <div class="tab-pane first-tab-pane fade show active" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
+                              <!-- Button to trigger navbar -->
+                                 <div class="trigger container rounded-4 w-80  shadow-lg" style="width:70%;s">
+                                    <form class="text-center p-4 " role="button" data-bs-toggle="modal" data-bs-target="#addPostModal"  >
+                                      <input class="rounded-pill me-2 form-control" type="search" placeholder="What's on your mind?" aria-label="Search">
+                                    </form>                                
+                                </div>
+      
+
+                            <!-- Navbar to add post -->
+                            <div class="modal " id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header text-center">
+                                   <center><h5 class="modal-title" id="addPostModalLabel">Create Post</h5></center> 
+                                    <hr>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body" aria-placeholder="What's on your mind?"> 
+                                    <!-- Add form fields here to create a new post -->
+                                  </div>
+                                  <div class="modal-footer">
+                                    <div class="form">
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>   
+                        </div> 
+                        
+                        <!-- start of terminal report section -->
+                        <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                            <div id="terminalReport">
+                                    <div class="container">  
+                                        <marquee data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="h5 text-shadow-lg text-primary " style="font-family: 'Open Sans', sans-serif;"> <a> Thank you for visiting my website and reading my blog. My goal is to provide you with valuable information and insights on a variety of topics related to Techonology</a></marquee>
+                                      <div class="row">
+                                        {{#each newsData}}
+                                          <div class="col-xm-12 col-sm-6 col-md-4">
+                                            <div class="card h-80 m-2">
+                                              <a href="#">
+                                                <img class="card-img-top" src="{{this.urlToImage}}" alt="{{this.title}}">
+                                              </a>
+                                              <div class="card-body"  style="font-family: 'Open Sans', sans-serif;">
+                                                <h4 class="card-title"><a href={{this.url}}>{{this.title}}</a></h4>
+                                                <p class="card-text">{{this.description}}</p>
+                                              </div>
+                                              <div class="card-footer">
+                                                <small class="text-muted">{{this.publishedAt}}</small>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        {{/each}}
+                                      </div>
+                                      </div>
+
+                            </div>
+                        <!-- end of terminal report sections -->
+                    </div>
+                        <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3 text-justify">
+                            WILL BE UPDATED SOON
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {{!--  --}}
+
+
+
+
+
+
+    
 
   
 
@@ -67,22 +134,4 @@
     <img      src="images/2ndlogoofcode.webp" alt="">
   </a>
   </div>
-
-
-    {{!--footer  --}}
-    {{!-- {{>footer}} --}}
- 
-
-{{!-- <div class="container">
-    <div class="row">
-        <div class="mt-4 mb-4">
-          <iframe style="width:100vw ; height:100vh" src="https://rss.app/embed/v1/wall/tCh7KftRtzv6UlmG" frameborder="0"></iframe>
-
-        </div>
-
-    </div>
-</div> --}}
-
-{{!-- <rssapp-wall id="t1bMacw7LTfsGeKt"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script> --}}
-{{!-- <iframe width="900" height="1600" src="https://rss.app/embed/v1/wall/t1bMacw7LTfsGeKt" frameborder="0"></iframe> --}}
 

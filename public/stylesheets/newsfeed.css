@@ -14,6 +14,8 @@ color: var(--secondary);
 }
 
 
+
+
 .wrap{
 max-width: 1398px;
 margin: auto;
@@ -75,27 +77,22 @@ overflow-x:hidden !important;
     width: 70%;
   }
   
-  .logoSectionWrap{
-    margin-top: 3rem;
-    color: #0c1424;
-  }
 
-  .logoSectionWrap img{
-    margin:auto;
-  }
-
-  /
-
-  .logoSectionWrap button{
-    margin-top: 2rem;
-    margin-left: 2rem;
-    padding: 2rem 2rem 2rem 2rem;
-    background-color: var(--primary);
-    border-style: none;
-    color: white;
-    font-size: large;
-  }
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
   
+
+.tab-content .tab-pane > .trigger{
+  background-color: #f0f5f6;
+}
+
+.first-tab-pane {
+  min-height: 40rem;
+}
   
   section p{
     font-size: x-large;

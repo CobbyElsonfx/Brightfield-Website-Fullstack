@@ -26,8 +26,12 @@ const userSchema  =  new mongoose.Schema({
     password : {   
         type:String,
         minLength :[6, "Password must be more than Six characters"],
-        required:true
+        required:true   
     },
+    isAdmin:{
+        type:Boolean,
+        default:false
+    }
     },
     { timestamps: true },)
 
@@ -46,7 +50,7 @@ userSchema.pre("save", async function(next) {
 //is that we need to query the database to find the user based on their email, and we want to keep this logic in the model layer.
 userSchema.statics.login = async function(email, password){
 
-    const user = await  this.findOne({email})  // the find represents the user model so it could have been userSchema.fin
+    const user = await  this.findOne({email})  
     if(user){
      const auth = await bcrypt.compare(password, user.password) // auth becomes truthy so we can say if it succeds it comparing it do that ...
      if(auth){

@@ -78,12 +78,12 @@ overflow-x:hidden !important;
   }
   
 
-.modal-dialog {
+/* .modal-dialog {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-}
+} */
   
 
 .tab-content .tab-pane > .trigger{
@@ -98,7 +98,43 @@ overflow-x:hidden !important;
     font-size: x-large;
     font-family: 'Poppins', sans-serif;
   }
-  
+
+  /* modal */
+  .input-group {
+  width: 100%;
+}
+
+.form-control {
+  border-radius: 4px;
+}
+
+.btn-primary {
+  border-radius: 10px;
+}
+
+.modal-dialog {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.modal-content {
+  border-radius: 5px;
+}
+
+.modal-header {
+  border-radius: 3px 3px 0 0;
+}
+
+.modal-footer {
+  border-radius: 0 0 3px 3px;
+}
+
+.modal-backdrop {
+  opacity: 0.5 !important;
+}
+
+  /* end of modal */
+
   #floatn img{
     
     width: 4rem;

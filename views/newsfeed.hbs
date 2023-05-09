@@ -29,7 +29,6 @@
 
     {{!--  --}}
      <div id="otherDetails">
-
             <section class="text-center text-lg-start bg-light container shadow mt-4">    
                 <div id="firstSectionInOtherDetails">
                     <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
@@ -60,7 +59,30 @@
       
 
                             <!-- Navbar to add post -->
-                            <div class="modal " id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="addPostModal" tabindex="-1">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Create Post</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form>
+                                    <div class="mb-3">
+                                      <label for="post-content" class="form-label">What's on your mind?</label>
+                                      <textarea class="form-control" id="post-content" rows="3"></textarea>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                  <button type="button" class="btn btn-primary">Post</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                            {{!-- <div class="modal "  tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
                               <div class="modal-dialog">
                                 <div class="modal-content">
                                   <div class="modal-header text-center">
@@ -79,11 +101,11 @@
                                 </div>
                               </div>
                             </div>   
-                        </div> 
+                        </div>  --}}
                         
                         <!-- start of terminal report section -->
                         <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
-                            <div id="terminalReport">
+                            <div>
                                     <div class="container">  
                                         <marquee data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="h5 text-shadow-lg text-primary " style="font-family: 'Open Sans', sans-serif;"> <a> Thank you for visiting my website and reading my blog. My goal is to provide you with valuable information and insights on a variety of topics related to Techonology</a></marquee>
                                       <div class="row">

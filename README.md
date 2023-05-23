@@ -4,67 +4,69 @@
 <ins>### Project Link : https://btnfullstackweb.onrender.com  <ins>
 
 
-<ins>#INTEGRATED STACKS</ins>
-* HTML
-* CSS
-* JAVASCRIPT
-* JQUERY 
-* BOOTSTRAP
-* HANDLEBARS TEMPLATING
-* NODE AND EXPRESS.JS
-* MVC
-* MONGODB
+## Introduction
 
+I developed the Brightfield Tech Academy Website to showcase my expertise in full-stack development and simplify the application process for learners interested in enrolling at Brightfield Tech Academy. The website allows learners to apply online without visiting the Brightfield Center in person. Additionally, it provides an admin panel to create posts and update learners on the latest happenings.
+Tech Stack Overview
 
+### The Brightfield Tech Academy Website utilizes the following tech stack:
 
+    Front-end: JavaScript, Handlebars templating, HTML, CSS, and Bootstrap.
+    Back-end: Node.js with Express.js framework.
+    Database: MongoDB for data storage.
 
-### How I created the blog section using NEWSAPI 
-To create a news API in Node, you can follow the steps outlined below:
+## Architecture Overview
 
-Set up your project environment: Create a new folder for your project and initialize a new Node project using npm init in the terminal. Install the required dependencies like express, axios, and dotenv by running npm install express axios dotenv.
+The root directory of the project contains several directories and files, each serving a specific purpose:
 
-Obtain an API key: To fetch the news data, you will need to use a news API. Register for an API key from any news provider of your choice, such as NewsAPI or The Guardian.
+    Controllers: Handles the logic of the website, determining which views to present to the user and managing user authentication.
 
-Create a .env file: In the root directory of your project, create a new file named .env. Inside the .env file, add your API key as API_KEY=your_api_key_here.
+    DB: Contains a function used in app.js to establish a connection to the MongoDB database using the connection string stored in the .env file.
 
-Set up your server: Create a new file named server.js and add the following code:
+    Middleware: Contains the requireAuth file, which includes functions to protect certain routes from unauthorized access.
 
-```
+    Models: Includes three files:
+        Auth: Represents the model for user authentication.
+        Blog: Represents the model for the website's newsfeed section, allowing the admin to create and delete posts.
+        Forms: Represents the model for student admission forms.
 
-const express = require('express');
-const axios = require('axios');
-require('dotenv').config();
+    Public: Stores static files such as images, CSS, and client-side JavaScript.
 
-const app = express();
-const port = process.env.PORT || 3000;
-const apiKey = process.env.API_KEY;
+    Routes: Defines various endpoints, including /, /users, /about, /contact, /learn, /programs, /mentorship, /newsfeed, /user/signup, /user/login, /user/logout, and more. Each route corresponds to a specific functionality of the website and communicates with the controllers.
 
-app.get('/news', async (req, res) => {
-  try {
-    const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
-    res.json(response.data.articles);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  }
-});
+    Views: Contains the views for different sections of the website, such as home, about, blog, and more. Handlebars templating is used to generate dynamic content and render the views.
 
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
-});
+    Other files: The root directory also includes files such as .env (containing environmental variables like connection string, port, API keys, and JWT secret), app.js (the entry point of the website, handling server creation, endpoint registration, and database connections), package-lock.json, package.json, README, and .gitignore.
 
+## Data Flow and Interaction
 
-```
+When a user interacts with the Brightfield Tech Academy Website, the data flow follows these steps:
 
-In the above code, we have imported the required packages, initialized our express app, and set the port. We have also created a route for fetching news data from the news API using the axios package. The API key is obtained from the .env file, and the data is returned as JSON.
+    User requests are handled by specific endpoints defined in app.js.
+    These endpoints correspond to routes defined in the routes directory.
+    The routes communicate with the controllers, which contain the necessary logic to process the user's request and determine the appropriate view to present.
+    The controllers interact with the models to perform actions such as user authentication, post creation/deletion, or student admission form handling.
+    The controllers then render the appropriate view from the views directory, generating dynamic content using Handlebars templating.
+    The rendered view is sent back as a response to the user.
 
-Start your server: In the terminal, run node server.js to start your server.
+### Key Functionalities and Integrations
 
-Test your API: Open your browser or any API testing tool like Postman and navigate to http://localhost:3000/news to see the news data.
+The Brightfield Tech Academy Website includes several key functionalities and integrations:
 
-That's it! You have now created a news API in Node. You can further customize this API to suit your needs, such as adding additional routes, filters, or pagination.
+    Newsfeed Section: The website displays current news using the News API. The Axios library is used to fetch news data, which is then displayed in the UI. Handlebars helpers are utilized to loop through the data and present it to users.
 
+    Email Functionality: Users can apply for admission and receive confirmation emails. This functionality is integrated using SendGrid, a cloud-based SMTP provider that eliminates the need for maintaining an email server.
 
+    User Authentication: JWT (JSON Web Token) is employed for user authentication. Upon successful login, a token is generated and stored in the user's local storage as a cookie. This token is used for future authorization. User passwords are securely hashed using the bcrypt library in JavaScript.
 
-## FUNCTIONALITIES: 
-  1. Ability to send emails to individuals who signs up for the program: I was able to achieve this using nodemail, a nodejs package that allows you to send messages. I also used the available template on sendGrid, SendGrid is an online email site that  provides already formatted emails templates one choose from customise to meet their needs
+Lessons Learned and Future Considerations
+
+During the development of the Brightfield Tech Academy Website, I gained valuable insights and knowledge, including:
+
+    Improved organization and naming conventions for enhanced project presentation and readability.
+    Implementation of JWT for user authentication.
+    Integration of external APIs like the News API and SendGrid for extended functionality.
+
+In the future, I plan to enhance the website's capabilities by implementing features such as course uploads, assignments, the admin's ability to create posts, and a discussion forum for learners.
+
+By building the Brightfield Tech Academy Website, I not only demonstrated my full-stack development skills but also developed a platform that simplifies the admission process and keeps learners informed about Brightfield Tech Academy.

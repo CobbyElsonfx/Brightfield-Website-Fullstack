@@ -2,6 +2,11 @@
 ## My sincere gratitude goes out to Mr. Oliver (DevRel at @digitalocean), who motivated me to do this project in order to demonstrate my expertise in full-stack web development.
 
 <ins>### Project Link : https://btnfullstackweb.onrender.com  <ins>
+   ### Gallery of various views
+   Screenshot 2023-05-23 at 5.39.32 PM![image](https://github.com/CobbyElsonfx/Brightfield-Website-Fullstack/assets/109095646/2e2c6a61-af51-47f3-a027-9057d631a59d)
+   Screenshot 2023-05-23 at 5.38.21 PM![image](https://github.com/CobbyElsonfx/Brightfield-Website-Fullstack/assets/109095646/ad777fa9-e11c-4bb4-81ff-e9b88efe6190)
+
+
 
 
 ## Introduction

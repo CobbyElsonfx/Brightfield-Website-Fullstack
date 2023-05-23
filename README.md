@@ -5,8 +5,8 @@
    ### Gallery of various views
 Screenshot 2023-05-23 at 5.38.12 PM![image](https://github.com/CobbyElsonfx/Brightfield-Website-Fullstack/assets/109095646/dd40a360-27c3-4b7d-bf2d-20529b8a8d5f)
    Screenshot 2023-05-23 at 5.38.21 PM![image](https://github.com/CobbyElsonfx/Brightfield-Website-Fullstack/assets/109095646/ad777fa9-e11c-4bb4-81ff-e9b88efe6190)
-   ### Video S
-   ![Video](./public/vid/Screen Recording 2023-05-23 at 5.44.00 PM.mov)
+   ### Video 
+   ![Video](./public/vid/Screen Recording 2023-05-23 at 5.44.00 PM.vid)
    
 
 

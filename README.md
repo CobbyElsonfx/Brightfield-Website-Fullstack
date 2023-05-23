@@ -11,13 +11,13 @@ Tech Stack Overview
 
 ### The Brightfield Tech Academy Website utilizes the following tech stack:
 
-    Front-end: JavaScript, Handlebars templating, HTML, CSS, and Bootstrap.
-    Back-end: Node.js with Express.js framework.
-    Database: MongoDB for data storage.
+    * Front-end: JavaScript, Handlebars templating, HTML, CSS, and Bootstrap.
+    * Back-end: Node.js with Express.js framework.
+    * Database: MongoDB for data storage.
 
 ## Architecture Overview
 
-The root directory of the project contains several directories and files, each serving a specific purpose:
+* The root directory of the project contains several directories and files, each serving a specific purpose:
 
     Controllers: Handles the logic of the website, determining which views to present to the user and managing user authentication.
 

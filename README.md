@@ -40,7 +40,7 @@ Tech Stack Overview
 
 ## Data Flow and Interaction
 
-When a user interacts with the Brightfield Tech Academy Website, the data flow follows these steps:
+* When a user interacts with the Brightfield Tech Academy Website, the data flow follows these steps:
 
     User requests are handled by specific endpoints defined in app.js.
     These endpoints correspond to routes defined in the routes directory.
@@ -51,7 +51,7 @@ When a user interacts with the Brightfield Tech Academy Website, the data flow f
 
 ### Key Functionalities and Integrations
 
-The Brightfield Tech Academy Website includes several key functionalities and integrations:
+* The Brightfield Tech Academy Website includes several key functionalities and integrations:
 
     Newsfeed Section: The website displays current news using the News API. The Axios library is used to fetch news data, which is then displayed in the UI. Handlebars helpers are utilized to loop through the data and present it to users.
 
